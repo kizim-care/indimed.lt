@@ -23,7 +23,7 @@
     <div class="container flex items-center justify-between py-4 mx-auto max-w-7xl">
         <a href="/" class="z-10 flex items-center w-auto text-2xl font-extrabold leading-none text-black select-none">IndiMed<span class="text-green-600">.</span></a>
 
-        <nav :class="showMenu ? '' : 'hidden'" class="top-0 left-0 z-0 px-8 pb-6 pt-14 md:p-0 bg-white shadow-md md:shadow-none absolute md:static flex flex-col md:flex-row md:flex md:items-center justify-center w-full md:w-auto gap-y-3 gap-x-6 text-base">
+        <nav x-cloak :class="showMenu ? '' : 'hidden'" class="top-0 left-0 z-0 px-8 pb-6 pt-14 md:p-0 bg-white shadow-md md:shadow-none absolute md:static flex flex-col md:flex-row md:flex md:items-center justify-center w-full md:w-auto gap-y-3 gap-x-6 text-base">
             <% menuItems.forEach((item) => { %>
                 <a href="<%= item.href %>" class="font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900" x-on:click="showMenu = false">
                     <span class="block"><%= item.text %></span>
@@ -33,7 +33,7 @@
 
         <div class="hidden md:flex items-center space-x-3 shrink-0">
             <span class="inline-flex rounded-md shadow-sm">
-                <a href="#" class="inline-flex items-center justify-center px-4 py-1.5 text-base font-medium leading-6 text-white whitespace-no-wrap bg-green-600 rounded-md shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" data-rounded="rounded-md" data-primary="green-600">Palikti užklausą</a>
+                <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-green-600 rounded-md shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" data-rounded="rounded-md" data-primary="green-600">Palikti užklausą</a>
             </span>
         </div>
 

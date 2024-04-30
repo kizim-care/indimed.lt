@@ -1,26 +1,71 @@
+<%
+    let selfSlides = [
+        'https://kizim-lt.b-cdn.net/indimed.lt/HgCfNwUREFhfZVVXbRdjyHqhWwyx3kieSTQ3SHOm.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/JIdu4oa1Uqyno22KozVhFbioDx0VTMB4Me7CJtAz.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/crUp0kLOaH3HdIKznkQeF96UTezl2LLG1IdwsYla.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/FTZKMX4s1buFlaNWsRxgchvU6gVhB13IWywO2vGY.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/ta7IaBrDbEjtQ0vw94QfHAfB64C67SwDF5BiL44B.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/eITVv95Oy1YJgoPOY7zOFZ6gayfXkIBFLwwwRnaK.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/79C5yk6BqLJs23NuMdOGWTNBy4KQs2LBqqpPxLnI.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/4y7U0lhqglbfAz6nxSnVLqTIye23RUzjbCVViCQM.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/z4MtP2NdsS7expDuncUGURjP7rdtNZvHSm4BUEbY.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/PLy4IGI1qzehdpZihyvxgl9VfAR85Bt8w4JBdbi1.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/MmAMH7PChOVYMHwV1lEWneV3hAX8Vl2pClESAyDt.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/D1APKpizTyH2Qb479MANwXqslEJDVDXHQ7a0vApW.webp',
+    ];
+
+    if (typeof slides !== 'undefined') {
+        selfSlides = slides;
+    }
+%>
+
 <section class="py-40 bg-white px-8" id="pradzia">
     <div class="container items-center max-w-7xl mx-auto">
         <div class="flex flex-col lg:flex-row items-center gap-20">
             <div class="lg:w-1/2">
-                <p class="font-medium text-gray-700 uppercase text-sm md:text-base mb-3">INDIVIDUALIŲ KINEZITERAPEUTŲ DRAUGIJA 🇱🇹</p>
+                <p class="font-medium text-gray-700 uppercase text-sm md:text-base mb-2">INDIVIDUALIŲ KINEZITERAPEUTŲ DRAUGIJA 🇱🇹</p>
                 <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-gray-900">
-                    <span class="block xl:inline">Kineziterapeutai</span>
-                    <span class="block text-green-600 xl:inline" data-primary="indigo-600">Vilniuje</span>
+                    <%- title  %>
                 </h1>
-                <p class="text-base text-gray-500 lg:text-lg my-8">Norite gauti 100% dėmesį ir rūpestį savo gydymo atvejui? Tuomet palikite užklausą nepriklausomų ir individualiai dirbančių Lietuvos kineziterapeutų draugijai!</p>
+                <p class="text-base text-gray-500 lg:text-lg my-5 ld:my-8">Norite gauti 100% dėmesį ir rūpestį savo gydymo atvejui? Tuomet palikite užklausą nepriklausomų ir individualiai dirbančių Lietuvos kineziterapeutų draugijai!</p>
                 <div class="flex flex-col lg:flex-row gap-4">
-                    <a href="#uzklausos-forma" class="flex items-center justify-center px-6 py-3 text-lg text-white bg-green-600 rounded-md hover:bg-green-700">
+                    <a href="#uzklausos-forma" class="flex items-center justify-center px-6 py-3 text-lg text-white bg-green-600 rounded-md hover:bg-green-700 transition-colors">
                         Palikti užklausą draugijai
                     </a>
-                    <a href="#apie-mus" class="shrink-0 flex items-center justify-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600">
+                    <a href="#apie-mus" class="shrink-0 flex items-center justify-center px-6 py-3 text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors">
                         Sužinoti daugiau
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12" class=""></line><polyline points="12 5 19 12 12 19" class=""></polyline></svg>
                     </a>
                 </div>
             </div>
             <div class="lg:w-1/2">
-                <div class="w-full h-auto overflow-hidden rounded-md sm:rounded-xl" data-rounded="rounded-xl" data-rounded-max="rounded-full">
-                    <img src="https://storage.mlcdn.com/account_image/215424/u89sBEtipuzoKlSaHa7mqAeHyr3lTrRCX4Dj5SUm.gif" class="">
+                <div class="w-full h-auto overflow-hidden rounded-md sm:rounded-xl relative" data-rounded="rounded-xl" data-rounded-max="rounded-full">
+                    <img class="opacity-0" src="<%- selfSlides[0] %>" alt="<%- title.replace(/<[^>]*>/g, '')  %>">
+
+                    <div class="absolute top-0 left-0 h-full w-full"
+                        x-data="{
+                            index: 0,
+                            currentImage: 0,
+                            nextImage: 1,
+                            images: [<% selfSlides.forEach((slide) => { %>'<%- slide %>',<% }) %>]
+                        }"
+                        x-init="setInterval(function() {
+                            index = (index + 1) % images.length
+
+                            if (currentImage < nextImage) {
+                                setTimeout(() => currentImage = (currentImage + 2) % images.length , 1000)
+
+                                return;
+                            }
+
+                            if (nextImage < currentImage) {
+                                setTimeout(() => nextImage = (nextImage + 2) % images.length, 1000)
+                            }
+                        }, 3000)"
+                    >
+                        <img :src="images[currentImage]" class="absolute transition-opacity duration-700" :class="{ 'opacity-0': (index % 2) !== 0, 'opacity-100' :  (index % 2) === 0 }" src="<%- selfSlides[0] %>" alt="<%- title.replace(/<[^>]*>/g, '')  %>">
+                        <img x-cloak :src="images[nextImage]" class="absolute transition-opacity duration-700" :class="{ 'opacity-0': (index % 2) === 0, 'opacity-100' :  (index % 2) !== 0 }" src="<%- selfSlides[1] %>" alt="<%- title.replace(/<[^>]*>/g, '')  %>">
+                    </div>
                 </div>
             </div>
         </div>

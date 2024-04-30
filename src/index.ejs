@@ -2,11 +2,11 @@
 layout: layout.ejs
 ---
 
-<%- include('./_includes/components/menu_top.ejs'); %>
+<%- include('./_includes/components/menu_top.ejs') %>
 
-<%-
-    include('./_includes/components/hero.ejs');
-%>
+<%- include('./_includes/components/hero.ejs', {
+    title: 'Kineziterapeutai <span class="text-green-600">Vilniuje</span>',
+}) %>
 
 <section class="px-2 pt-32 bg-white md:px-0 md:pb-20 lg:bg-green-600" id="apie-mus">
     <div class="container items-center max-w-6xl px-5 mx-auto space-y-6 text-center">

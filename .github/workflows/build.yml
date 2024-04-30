@@ -1,0 +1,39 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+
+      - name: Create CSS directory
+        run: mkdir -p _site/css/
+
+      - name: Install dependencies & build
+        run: |
+          npm install
+          npm run build
+          npm run build:css
+        env:
+          APP_ENV: ${{ secrets.APP_ENV }}
+
+      - name: Copy output.css to _site directory
+        run: cp src/css/output.css _site/css/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          publish_dir: ./_site
+          github_token: ${{ secrets.GITHUB_TOKEN }}

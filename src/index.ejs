@@ -1,5 +1,6 @@
 ---
 layout: layout.ejs
+meta_title: 'Kineziterapeutai Vilniuje'
 ---
 
 <%- include('./_includes/components/menu_top.ejs') %>
@@ -8,74 +9,11 @@ layout: layout.ejs
     title: 'Kineziterapeutai <span class="text-green-600">Vilniuje</span>',
 }) %>
 
-<section class="px-2 pt-32 bg-white md:px-0 md:pb-20 lg:bg-green-600" id="apie-mus">
-    <div class="container items-center max-w-6xl px-5 mx-auto space-y-6 text-center">
-       <h2 class="text-base font-medium text-gray-300 tracking-wide uppercase" style="margin-bottom:15px; contenteditable=" true"="">Apie mus&nbsp;👋</h2>
-        <h2 class="text-4xl font-extrabold tracking-tight text-left text-white-900 sm:text-5xl md:text-6xl md:text-center">
-            <span class="block text-white xl:text-5xl lg:text-5xl">Kas yra „IndiMed”?<br></span>
-        </h2>
-        <span class="block lg:text-gray-300 lg:text-lg xl:w-3/5 xl:m-auto">Susibūrę į draugiją nepriklausomi ir individualiai dirbantys Lietuvos kineziterapeutai ir reabilitologai, kurie laukia Jūsų užklausos<br></span>
-        <div class="relative flex flex-col justify-center md:flex-row md:space-x-4">
-            <a href="#apie-specialistus" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-black bg-white-500 rounded-md md:mb-0 hover:bg-gray-200 md:w-auto xl:bg-white" data-primary="white-500" data-rounded="rounded-md">
-                Sužinoti daugiau
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12" class=""></line>
-                    <polyline points="12 5 19 12 12 19" class=""></polyline>
-                </svg>
-            </a>
-        </div>
-    </div>
-    
-    <div class="container items-center max-w-4xl px-5 mx-auto mt-16 text-center">
-        
-<style>
+<%- include('./_includes/components/about.ejs', {
+    title: 'Kas yra „IndiMed“?',
+}) %>
 
-    .mySlides {
-      display: none;
-    }
-
-    .mySlides img {
-      width: 100%;
-      height: auto;
-    }
-  </style>
-
-
-  <div class="mySlides" style="display: block;">
-    <img src="https://storage.mlcdn.com/account_image/215424/9PtsWIzTAGc1V4CjZAMnJcgjXLpxV5qIqQaChqLj.png" style="width:100%" class="">
-  </div>
-
-  <div class="mySlides" style="display: none;">
-    <img src="https://storage.mlcdn.com/account_image/215424/z5fDBLdsUHqFM7d9NGRqf2QybTONh0boDiZGKAGI.png" style="width:100%" class="">
-  </div>
-
-  <div class="mySlides" style="display: none;">
-    <img src="https://storage.mlcdn.com/account_image/215424/Y0CCPPHh6ONR1er2a6ypYWknWmpn3vy0bWyi5NmG.png" style="width:100%" class="">
-  </div>
-
-  <div class="mySlides" style="display: none;">
-    <img src="https://storage.mlcdn.com/account_image/215424/DjugcR8VKFIhK2cnyr7rMVau9X4k0yTlGD0iuPxJ.png" style="width:100%" class="">
-  </div>
-
-
-<script>
-  var slideIndex = 0;
-  carousel();
-
-  function carousel() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(carousel, 1250);
-  }
-</script>
-
-</div></section><section class="py-12 sm:py-16 bg-white lg:bg-white-600" id="apie-specialistus">
+<section class="py-12 sm:py-16 bg-white lg:bg-white-600" id="apie-specialistus">
   <div class="max-w-7xl px-10 mx-auto sm:text-center">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 my-12 sm:my-16">
           <div class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100">

@@ -19,7 +19,7 @@
     }
 %>
 
-<section class="py-40 bg-white px-8" id="pradzia">
+<section class="py-32 bg-white px-8 mt-10" id="pradzia">
     <div class="container items-center max-w-7xl mx-auto">
         <div class="flex flex-col lg:flex-row items-center gap-20">
             <div class="lg:w-1/2">
@@ -45,6 +45,7 @@
                     <div class="absolute top-0 left-0 h-full w-full"
                         x-data="{
                             index: 0,
+                            sliderSwitcher: 'nextImage',
                             currentImage: 0,
                             nextImage: 1,
                             images: [<% selfSlides.forEach((slide) => { %>'<%- slide %>',<% }) %>]
@@ -52,14 +53,18 @@
                         x-init="setInterval(function() {
                             index = (index + 1) % images.length
 
-                            if (currentImage < nextImage) {
-                                setTimeout(() => currentImage = (currentImage + 2) % images.length , 1000)
+                            if (sliderSwitcher === 'nextImage') {
+                                setTimeout(() => currentImage = (currentImage + 2) % images.length , 700)
+
+                                sliderSwitcher = 'currentImage'
 
                                 return;
                             }
 
-                            if (nextImage < currentImage) {
-                                setTimeout(() => nextImage = (nextImage + 2) % images.length, 1000)
+                            if (sliderSwitcher === 'currentImage') {
+                                setTimeout(() => nextImage = (nextImage + 2) % images.length, 700)
+
+                                sliderSwitcher = 'nextImage'
                             }
                         }, 3000)"
                     >

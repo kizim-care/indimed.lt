@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.base-input {
+    @apply outline-none focus:border-transparent py-3 pr-4 block w-full shadow-sm rounded-lg text-sm focus:z-10 focus:ring-green-600/40 focus:ring-4 disabled:opacity-50 disabled:pointer-events-none
+}
+
+.select {
+    @apply border-y-0 border-l-0 border-r-8 border-r-transparent bg-white ps-11;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

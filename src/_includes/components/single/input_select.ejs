@@ -1,0 +1,22 @@
+<%
+    let randomId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+%>
+<div>
+    <label for="<%- randomId %>" class="block text-sm font-semibold mb-2 text-neutral-600"><%- label %><span class="text-rose-400">*</span></label>
+    <div class="relative">
+        <div class="border border-neutral-300 rounded-lg">
+            <select name="<%- name %>" id="<%- randomId %>" class="base-input select">
+                <option value="" disabled="" selected><%- placeholder %></option>
+                <% options.forEach((option) => { %>
+                    <option value="<%- option.value %>"><%- option.text %></option>
+                <% }) %>
+            </select>
+        </div>
+        <div class="absolute inset-y-0 start-4 flex items-center pointer-events-none z-20 text-gray-400">
+            <%- icon %>
+        </div>
+        <div class="absolute inset-y-0 end-4 flex items-center pointer-events-none z-20">
+            <svg class="h-4 w-4 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path></svg>                    
+        </div>
+    </div>
+</div>

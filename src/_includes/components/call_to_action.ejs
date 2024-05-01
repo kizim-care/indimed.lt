@@ -1,0 +1,57 @@
+<%
+    let steps = [
+        {
+            title: 'Jūs paliekate savo užklausą mūsų „IndiMed” specialistų draugijai',
+            description: 'Tereikia 1 minutės Jūsų dėmesio bei laiko',
+            icon: 'https://kizim-lt.b-cdn.net/indimed.lt/stopwatch%20-64.png',
+        },
+        {
+            title: 'Jūsų užklausa operatyviai išnagrinėjama draugijos specialistų',
+            description: 'Jūsų atvejo nagrinėjimas trunka nuo 5 iki 30 minučių',
+            icon: 'https://kizim-lt.b-cdn.net/indimed.lt/timer-64.png',
+        },
+        {
+            title: 'Su Jumis susisiekia tinkamiausias Jūsų atveju specialistas',
+            description: 'Specialistas susisiekia su Jumis kaip įmanoma greičiau',
+            icon: 'https://kizim-lt.b-cdn.net/indimed.lt/response-time-64.png',
+        }
+    ]
+%>
+
+<section class="px-8 py-32 bg-green-600">
+    <div class="container max-w-7xl mx-auto">
+        <div class="text-left md:text-center">
+            <%- include('./single/h3.ejs', {text: 'Laukiame jūsų užklausos 🤙'}) %>
+            <%- include('./single/h2.ejs', {text: 'Drąsiai  kreipkitės'}) %>
+            <div class="text-white lg:text-lg max-w-2xl m-auto mb-8">
+                Geriau vieną kartą išbandyti, nei šimtą kartų išgirsti
+            </div>
+        </div>
+
+        <div class="grid gap-8 mt-14 lg:grid-cols-3">
+            <% steps.forEach((step, index) => { %>
+                <div class="flex flex-col items-center gap-4 justify-between px-8 py-12 bg-gray-100 rounded-xl">
+                    <div
+                        class="
+                            p-1 border-4 border-green-600 rounded-full flex items-center justify-center w-14 h-14
+                            <% if (index === 0) { %>
+                                text-white bg-green-600
+                            <% } else { %>
+                                text-green-600
+                            <% } %>
+                        "
+                    >
+                        <span class="text-base font-bold lg:text-2xl"><%- index + 1 %></span>
+                    </div>
+
+                    <h4 class="text-xl font-medium text-gray-700"><%- step.title %></h4>
+
+                    <div class="flex items-center py-2 gap-4">
+                        <img src="<%- step.icon %>" class="w-7">
+                        <span class="font-medium text-gray-500"><%- step.description %></span>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</section>

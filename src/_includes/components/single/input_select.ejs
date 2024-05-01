@@ -1,8 +1,12 @@
 <%
     let randomId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 %>
+
 <div>
-    <label for="<%- randomId %>" class="block text-sm font-semibold mb-2 text-neutral-600"><%- label %><span class="text-rose-400">*</span></label>
+    <%- include('label.ejs', {
+        id: randomId,
+        label: label,
+    }) %>
     <div class="relative">
         <div class="border border-neutral-300 rounded-lg">
             <select name="<%- name %>" id="<%- randomId %>" class="base-input select">

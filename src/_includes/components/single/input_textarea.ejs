@@ -3,6 +3,9 @@
 %>
 
 <div>
-    <label for="<%- randomId %>" class="block text-sm font-semibold mb-2 text-neutral-600">Brief description of your case<span class="text-rose-400">*</span></label>
+    <%- include('label.ejs', {
+        id: randomId,
+        label: label,
+    }) %>
     <textarea id="<%- randomId %>" name="<%- name %>" class="base-input pl-4 border border-neutral-300" rows="3" placeholder="<%- placeholder %>"></textarea>
 </div>

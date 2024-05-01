@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .base-input {
-    @apply outline-none focus:border-transparent py-3 pr-4 block w-full shadow-sm rounded-lg text-sm focus:z-10 focus:ring-green-600/40 focus:ring-4 disabled:opacity-50 disabled:pointer-events-none
+    @apply outline-none py-4 pr-4 block w-full shadow rounded-lg text-sm focus:z-10 focus:ring-green-500/40 focus:ring-4 disabled:opacity-50 disabled:pointer-events-none
 }
 
 .select {

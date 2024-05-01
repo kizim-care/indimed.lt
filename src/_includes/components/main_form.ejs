@@ -1,7 +1,7 @@
 <section class="w-full bg-white px-8 py-32" id="uzklausos-forma">
     <div class="mx-auto max-w-7xl">
-        <div class="flex flex-col lg:flex-row items-center gap-20 xl:gap-32">
-            <div class="flex flex-col justify-center w-full bg-cover">
+        <div class="flex flex-col lg:flex-row items-center gap-20 xl:gap-24">
+            <div class="flex flex-col justify-center bg-cover basis-1/2">
                 <div class="tracking-tight">
                     <div>
                         <%- include('./single/h3.ejs', {
@@ -21,93 +21,95 @@
                 </div>
             </div>
 
-            <div class="flex flex-col items-start justify-start">
-                <h4 class="w-full text-3xl font-bold">Išbandykite</h4>
-                <p class="lg:text-lg text-gray-500">Tai patogu, tikslu ir greita</p>
-                <div class="relative w-full mt-10 space-y-8">
-                    <%- include('./single/input_select.ejs', {
-                        name: 'patientAge',
-                        label: 'Paciento amžiaus grupė',
-                        placeholder: 'Pasirinkite amžiaus grupę',
-                        options: [
-                            {
-                                value: 'Kūdikis - iki 1 metų',
-                                text: 'Kūdikis - iki 1 metų',
-                            },
-                            {
-                                value: 'Vaikas - iki 7 metų',
-                                text: 'Vaikas - iki 7 metų',
-                            },
-                            {
-                                value: 'Paauglis - iki 18 metų',
-                                text: 'Paauglis - iki 18 metų',
-                            },
-                            {
-                                value: 'Suaugęs - iki 60 metų',
-                                text: 'Suaugęs - iki 60 metų',
-                            },
-                            {
-                                value: 'Senjoras - 60+ metų',
-                                text: 'Senjoras - 60+ metų',
-                            },
-                        ],
-                        icon: '<svg class="h-5 w-5" stroke-width="2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" data-slot="icon"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"></path></svg>',
-                    }) %>
-
-                    <%- include('./single/input_textarea.ejs', {
-                        name: 'description',
-                        label: 'Trumpas Jūsų atvejo aprašymas',
-                        placeholder: 'Trumpai aprašykite savo atvejį',
-                    }) %>
-
-                    <%- include('./single/input_select.ejs', {
-                        name: 'canArrive',
-                        label: 'Ar galite atvykti pas specialistą?',
-                        placeholder: 'Pasirinkite tinkamą variantą',
-                        options: [
-                            {
-                                value: 'Taip > Galiu atvykti į nurodytą adresą',
-                                text: 'Taip > Galiu atvykti į nurodytą adresą',
-                            },
-                            {
-                                value: 'Ne > Reikia specialisto į namus',
-                                text: 'Ne > Reikia specialisto į namus',
-                            },
-                            {
-                                value: 'Nežinau > Noriu pasitarti su specialistu',
-                                text: 'Nežinau > Noriu pasitarti su specialistu',
-                            },
-                        ],
-                        icon: '<svg class="h-5 w-5" stroke-width="2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" data-slot="icon"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"></path></svg>',
-                    }) %>
-
-                    <%- include('./single/input_text.ejs', {
-                        name: 'name',
-                        type: 'text',
-                        label: 'Jūsų vardas',
-                        placeholder: 'Įveskite savo vardą',
-                        icon: '<svg class="h-5 w-5" stroke-width="2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" data-slot="icon"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"></path></svg>',
-                    }) %>
-
-                    <%- include('./single/input_text.ejs', {
-                        name: 'email',
-                        type: 'email',
-                        label: 'Jūsų el. pašto adresas',
-                        placeholder: 'Įveskite savo el. pašto adresą',
-                        icon: '<svg class="h-5 w-5" stroke-width="2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" data-slot="icon"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"></path></svg>',
-                    }) %>
-
-                    <%- include('./single/input_text.ejs', {
-                        name: 'phone',
-                        type: 'tel',
-                        label: 'Jūsų telefono numeris',
-                        placeholder: 'Įveskite savo telefono numerį',
-                        icon: '<svg class="h-5 w-5" stroke-width="2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" data-slot="icon"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"></path></svg>',
-                    }) %>
-
-                    <div class="relative">
-                        <a href="#_" class="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-green-600 rounded-lg hover:bg-green-700 ease" data-primary="green-600" data-rounded="rounded-lg">Siųsti užklausą draugijai</a>
-                                            <p class="w-full mt-4 text-sm text-center text-gray-500">Garantuojame visapusišką Jūsų asmens duomenų apsaugą ir konfidenciulumą pagal visus <a href="https://commission.europa.eu/law/law-topic/data-protection/reform/what-does-general-data-protection-regulation-gdpr-govern_lt" target="_blank" class="text-green-600 underline">BDAR</a> reglamento reikalavimus </p>
+            <div class="flex flex-col items-start justify-start basis-1/2">
+                <div class="sm:p-12 sm:border rounded-xl sm:shadow-lg">
+                    <h4 class="w-full text-3xl font-bold">Išbandykite</h4>
+                    <p class="lg:text-lg text-gray-500">Tai patogu, tikslu ir greita</p>
+                    <div class="relative w-full mt-10 space-y-8">
+                        <%- include('./single/input_select.ejs', {
+                            name: 'patientAge',
+                            label: 'Paciento amžiaus grupė',
+                            placeholder: 'Pasirinkite amžiaus grupę',
+                            options: [
+                                {
+                                    value: 'Kūdikis - iki 1 metų',
+                                    text: 'Kūdikis - iki 1 metų',
+                                },
+                                {
+                                    value: 'Vaikas - iki 7 metų',
+                                    text: 'Vaikas - iki 7 metų',
+                                },
+                                {
+                                    value: 'Paauglys - iki 18 metų',
+                                    text: 'Paauglys - iki 18 metų',
+                                },
+                                {
+                                    value: 'Suaugęs - iki 60 metų',
+                                    text: 'Suaugęs - iki 60 metų',
+                                },
+                                {
+                                    value: 'Senjoras - 60+ metų',
+                                    text: 'Senjoras - 60+ metų',
+                                },
+                            ],
+                            icon: '<svg class="h-5 w-5" stroke-width="2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" data-slot="icon"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"></path></svg>',
+                        }) %>
+    
+                        <%- include('./single/input_textarea.ejs', {
+                            name: 'description',
+                            label: 'Trumpas Jūsų atvejo aprašymas',
+                            placeholder: 'Trumpai aprašykite savo atvejį',
+                        }) %>
+    
+                        <%- include('./single/input_select.ejs', {
+                            name: 'canArrive',
+                            label: 'Ar galite atvykti pas specialistą?',
+                            placeholder: 'Pasirinkite tinkamą variantą',
+                            options: [
+                                {
+                                    value: 'Taip > Galiu atvykti į nurodytą adresą',
+                                    text: 'Taip > Galiu atvykti į nurodytą adresą',
+                                },
+                                {
+                                    value: 'Ne > Reikia specialisto į namus',
+                                    text: 'Ne > Reikia specialisto į namus',
+                                },
+                                {
+                                    value: 'Nežinau > Noriu pasitarti su specialistu',
+                                    text: 'Nežinau > Noriu pasitarti su specialistu',
+                                },
+                            ],
+                            icon: '<svg class="h-5 w-5" stroke-width="2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" data-slot="icon"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"></path></svg>',
+                        }) %>
+    
+                        <%- include('./single/input_text.ejs', {
+                            name: 'name',
+                            type: 'text',
+                            label: 'Jūsų vardas',
+                            placeholder: 'Įveskite savo vardą',
+                            icon: '<svg class="h-5 w-5" stroke-width="2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" data-slot="icon"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"></path></svg>',
+                        }) %>
+    
+                        <%- include('./single/input_text.ejs', {
+                            name: 'email',
+                            type: 'email',
+                            label: 'Jūsų el. pašto adresas',
+                            placeholder: 'Įveskite savo el. pašto adresą',
+                            icon: '<svg class="h-5 w-5" stroke-width="2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" data-slot="icon"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"></path></svg>',
+                        }) %>
+    
+                        <%- include('./single/input_text.ejs', {
+                            name: 'phone',
+                            type: 'tel',
+                            label: 'Jūsų telefono numeris',
+                            placeholder: 'Įveskite savo telefono numerį',
+                            icon: '<svg class="h-5 w-5" stroke-width="2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" data-slot="icon"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"></path></svg>',
+                        }) %>
+    
+                        <div class="relative">
+                            <a href="#_" class="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-green-600 rounded-lg hover:bg-green-700 ease" data-primary="green-600" data-rounded="rounded-lg">Siųsti užklausą draugijai</a>
+                                                <p class="w-full mt-4 text-sm text-center text-gray-500">Garantuojame visapusišką Jūsų asmens duomenų apsaugą ir konfidenciulumą pagal visus <a href="https://commission.europa.eu/law/law-topic/data-protection/reform/what-does-general-data-protection-regulation-gdpr-govern_lt" target="_blank" class="text-green-600 underline">BDAR</a> reglamento reikalavimus </p>
+                        </div>
                     </div>
                 </div>
             </div>

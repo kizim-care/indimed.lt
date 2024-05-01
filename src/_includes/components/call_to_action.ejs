@@ -30,7 +30,7 @@
 
         <div class="grid gap-8 mt-14 lg:grid-cols-3">
             <% steps.forEach((step, index) => { %>
-                <div class="flex flex-col items-center gap-4 justify-between px-8 py-12 bg-gray-100 rounded-xl">
+                <div class="flex flex-col items-center gap-4 justify-between px-6 py-6 md:px-8 md:py-12 bg-gray-100 rounded-xl">
                     <div
                         class="
                             p-1 border-4 border-green-600 rounded-full flex items-center justify-center w-14 h-14
@@ -44,9 +44,9 @@
                         <span class="text-base font-bold lg:text-2xl"><%- index + 1 %></span>
                     </div>
 
-                    <h4 class="text-xl font-medium text-gray-700"><%- step.title %></h4>
+                    <h4 class="font-bold md:text-xl text-gray-700 text-center"><%- step.title %></h4>
 
-                    <div class="flex items-center py-2 gap-4">
+                    <div class="flex items-center py-2 gap-3 md:gap-4">
                         <img src="<%- step.icon %>" class="w-7">
                         <span class="font-medium text-gray-500"><%- step.description %></span>
                     </div>

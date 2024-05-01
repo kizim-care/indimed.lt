@@ -1,3 +1,13 @@
-<h2 class="text-4xl font-extrabold tracking-tight xl:text-5xl text-white mb-6">
+<%
+    let textColor = 'text-white';
+
+    if (typeof color !== 'undefined') {
+        if (color === 'black') {
+            textColor = 'text-black';
+        }
+    }
+%>
+
+<h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight xl:text-5xl <%- textColor %> mb-6">
     <%- text %>
 </h2>

@@ -95,210 +95,81 @@ meta_title: 'Kineziterapeutai Vilniuje'
 
 <%- include('./_includes/components/services.ejs') %>
 
-<section class="px-2 py-32 bg-white md:px-0">
-  <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
-    <div class="flex items-center sm:-mx-3 gap-20">
+<%- include('./_includes/components/detail_block.ejs', {
+    title: 'Ar yra vaikų/kūdikių specialistų?',
+    subtitle: 'Priimamų pacientų amžius',
+    text: '„IndiMed” draugijoje turime specialistų, dirbančių ir besispecializuojančių su įvairiomis amžiaus grupėmis, nuo kūdikių iki vyresnio amžiaus žmonių. „IndiMed” draugija pasiruošusi teikti kokybiškas gydymo paslaugas ir pagalbą visiems, nepriklausomai nuo amžiaus ar sveikatos būklės.',
+    list: [
+        'Kūdikiai iki 1 metų',
+        'Vaikai nuo 1 iki 7 metų',
+        'Paaugliai nuo 7 iki 18 metų',
+        'Suaugusieji nuo 18 metų',
+        'Vyresnio amžiaus žmonės',
+    ],
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/age-groups.png',
+    id: 'pacientu-amziaus-grupes',
+}) %>
 
-      <div class="w-full md:w-1/2 xl:pr-px md:pr-15">
-        <div class="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl xl:mr-px-20" data-rounded="rounded-xl" data-rounded-max="rounded-full">
-            <img src="https://kizim-lt.b-cdn.net/indimed.lt/indimed-geri-specialsitai.png" class="">
-          </div>
-      </div>
-      <div class="w-full md:w-1/2">
-        <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0 xl:mx-0 xl:p-0">
-            
-<p class="font-medium text-black-500 uppercase" data-primary="black-500">kvalifikacija ir kompetencija</p>
+<%- include('./_includes/components/detail_block.ejs', {
+    title: 'Kokia yra paslaugų kaina?',
+    subtitle: 'SPECIALISTŲ PASLAUGŲ KAINOS',
+    text: 'Draugijos specialistų kainos yra tikrai prieinamos ir draugiškos. Tai dėl to, kad Jūs kreipiatės ne į brangiausias ir išreklamuotas klinikas, o tiesiogiai į individualiai dirbančius specialistus. Primename, kad kreipdamiesi į privačias dideles klinikas, į paslaugų kainą įeina reklamos išlaidos, brangi patalpų nuoma ir kiti papildomi administraciniai mokesčiai. Kreipiantis į individualiai dirbančius specialistus, Jūs išvengiate šių perteklinių mokesčių. Draugijoje esančių specialistų paslaugų kainos svyruoja nuo €19 iki €60 už valandą. Vidutinė paslaugų kaina yra apie €30-40 už valandą. Galutinė kaina priklauso nuo gydymo procedūros sudėtingumo, paslaugos tipo bei konkretaus specialisto kvalifikacijos. Paprasčiausias ir greičiausias būdas sužinoti, ar turime draugijoje reikiamą specialistą už komfortišką Jums kainą, yra pateikti užklausą draugijai.',
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/kinezi-paslaugu-kaina.png',
+    id: 'specialistu-paslaugu-kainos',
+    bgColor: 'gray',
+    textPosition: 'left',
+}) %>
 
+<%- include('./_includes/components/detail_block.ejs', {
+    title: 'Kur randasi specialistai?',
+    subtitle: 'Miestai, kuriuose vykdome veiklą',
+    text: '„IndiMed” draugijoje turime specialistų, dirbančių įvairiose Lietuvos vietovėse. Naujų miestų ir vietovių sąrašas nuolat plečiasi. Paprasčiausias ir greičiausias būdas sužinoti, ar turime draugijoje reikiamą specialistą Jūsų ieškomoje vietovėje, yra pateikti užklausą draugijai.',
+    list: [
+        'Vilnius',
+        'Kaunas',
+        'Klaipėda',
+        'Šiauliai',
+        'Panevėžys',
+        'Alytus',
+        'Kiti miestai',
+    ],
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/veiklos-miestai.png',
+    id: 'miestai-kuriuose-vykdome-veikla',
+}) %>
 
-    <h1 class="font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl" style="margin-top:-5px;">
-        <span class="lg:text-3xl">Ar draugijoje geri specialistai?</span>
-    </h1>
+<%- include('./_includes/components/detail_block.ejs', {
+    title: 'O kas, jei specialistas netiks?',
+    subtitle: 'Netikusio specialisto atveju',
+    text: 'Mes nuolat tobuliname „IndiMed” draugijos organizaciją siekdami užtikrinti, kad Jūsų užklausa būtų kuo sėkmingiau patenkinta jau pirmuoju bandymu. Tačiau jei dėl kokių nors priežasčių nepavyksta susitarti su specialistu, kuris priėmė Jūsų užklausą, tai nėra problema. Galite į mus vėl kreiptis pateikiant papildomą informaciją. Taip suteiksite galimybę priimti Jūsų užklausą naujam draugijos nariui, kuris galbūt bus Jums tinkamesnis. Svarbu pabrėžti, kad gana retai nepavyksta patenkinti užklausos po antrojo bandymo. Mūsų draugija veikia bendradarbiavimo ir profesionalios darbo etikos principais, todėl siekiame užtikrinti, kad kiekvienas žmogus būtų aptarnautas kuo geriau.',
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/jei-netiks-specialsitas.png',
+    id: 'netikusio-specialisto-atvejis',
+    bgColor: 'gray',
+    textPosition: 'left',
+}) %>
 
+<%- include('./_includes/components/detail_block.ejs', {
+    title: 'Kodėl verta kreiptis?',
+    subtitle: '100% DĖMESYS JŪSŲ ATVEJUI',
+    text: 'Didelėse privačiose klinikose dažniausiai kainos labai kandžiojasi. Taipogi dėl didelio pacientų srauto, deja, Jums suteikiamas bendras dėmesys. Kreipdamiesi į individualiai dirbantį specialistą, Jūs gaunate individualų 100% dėmesį, skirtą būtent Jūsų gydymo atvejui. Yra įsigilinama į Jūsų atvejo visas detales ir taikoma nuosekli bei unikali Jūsų gydymo eiga. Kiekvienas individualiai dirbantis specialistas puoselėja savo reputaciją ir vardą, jis yra motyvuotas suteikti Jums maksimaliai vertingą gydymo paslaugą. Palikdami užklausą mūsų draugijai, Jūs tikrai niekuo nerizikuojate ir nieko neprarandate. Kviečiame patirti, ką reiškia būti priimtam individualaus ir motyvuoto specialisto.',
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/kode-verta-kreiptis.png',
+    id: 'kodel-verta-kreiptis',
+}) %>
 
-    
-    
-    <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl lg:text-left">„IndiMed” draugija siekia laikytis aukščiausių gydymo paslaugų kokybės standartų. Visi draugijoje esantys specialistai turi tinkamą sveikatos ir medicininį išsilavinimą, taip pat galiojančias licencijas bei leidimus vykdyti veiklą. Į draugiją susibūrė profesionalūs,&nbsp;motyvuoti&nbsp;ir nuolat savo kvalifikaciją ir kompetenciją keliantys specialistai.</p>
-    <div class="relative flex flex-col sm:flex-row sm:space-x-4">
-        <a href="#_" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-green-600 rounded-md sm:mb-0 hover:bg-green-700 sm:w-auto" data-primary="indigo-600" data-rounded="rounded-md"> Palikti užklausą draugijai 
-        </a>
-    </div>
-</div>
-
-      </div>
-
-    </div>
-  </div>
-</section><section class="w-full bg-gray-100 pt-5 pb-5 md:pt-5 md:pb-5">
-    <section class="py-10 bg-gray-100">
-    <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
-      <div class="flex flex-wrap items-center sm:-mx-3">
-        <div class="w-full md:w-1/2 md:px-3">
-          <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0 xl:mx-0 xl:p-0">
-            
-<p class="font-medium text-black-500 uppercase" data-primary="black-500">Gydymo kategorijos ir ATVEJAI</p>
-
-
-    <h1 class="font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl" style="margin-top:-5px;">
-        <span class="lg:text-3xl">Ką gydo draugijos specialistai?</span>
-    </h1>
-    <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl lg:text-left">Paprasčiau būtų atsakyti, ko negydo „IndiMed” draugijoje esantys specialistai. Kodėl? Nes draugijos narių ir skirtingų kompetencijų specialistų sąrašas nuolat auga. Draugijoje turime įvairių rūšių bei kategorijų reabilitacijos specialistų, kineziterapeutų, manualinių terapeutų, osteopatų, gydomųjų masažų meistrų, kūdikių ir vaikų raidos sutrikimų gydymo terapeutų. Paprasčiausias ir greičiausias būdas sužinoti, ar turime draugijoje reikiamą Jums specialistą, yra pateikti užklausą draugijai.</p>
-    <div class="relative flex flex-col sm:flex-row sm:space-x-4">
-        <a href="#_" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-green-600 rounded-md sm:mb-0 hover:bg-green-700 sm:w-auto" data-primary="indigo-600" data-rounded="rounded-md"> Palikti užklausą draugijai 
-        </a>
-    </div>
-</div>
-  
-        </div>
-        <div class="w-full md:w-1/2">
-          <div class="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl" data-rounded="rounded-xl" data-rounded-max="rounded-full">
-              <img src="https://kizim-lt.b-cdn.net/indimed.lt/indimed-duk-002.png" class="">
-            </div>
-        </div>
-      </div>
-    </div>
-  </section></section><section class="w-full bg-white pt-7 pb-7 md:pt-10 md:pb-24">
-    <div class="box-border flex flex-col items-center content-center px-8 mx-auto leading-6 text-black border-0 border-gray-300 border-solid md:flex-row max-w-7xl lg:px-16">
-
-        <!-- Image -->
-        <div class="box-border relative w-full max-w-md px-4 mt-5 mb-4 -ml-5 text-center bg-no-repeat bg-contain border-solid md:ml-0 md:mt-0 md:max-w-none lg:mb-0 md:w-1/2 xl:pl-10">
-            <img src="https://storage.mlcdn.com/account_image/215424/HgCfNwUREFhfZVVXbRdjyHqhWwyx3kieSTQ3SHOm.png" class="p-2 pl-6 pr-5 xl:pl-0 xl:pr-10">
-        </div>
-
-        <!-- Content -->
-        <div class="box-border order-first w-full text-black border-solid md:w-1/2 md:pl-10 md:order-none">
-            <h2 class="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">Reabilitacija</h2>
-            <p class="pt-4 pb-5 m-0 leading-7 text-gray-700 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">Papasakokite savo kreipimosi užklausoje trumpai apie Jūsų patirtą traumą, operaciją, sutrikimą ar ligą. Tinkamiausias Jūsų atveju specialistas sureaguos į Jūsų užklausą, suteiks trumpą konsultaciją telefonu, pakvies vizitui, informuos apie gydymo paslaugų sąlygas ir kainas.</p>
-            <ul class="pb-10 m-0 leading-6 border-0 border-gray-300">
-                <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-600 rounded-full" data-primary="yellow-400"><span class="text-sm font-bold">✓</span></span> Reabilitacija po traumų
-                </li>
-                <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-600 rounded-full" data-primary="yellow-400"><span class="text-sm font-bold">✓</span></span> Reabilitacija po kaulų lūžių
-                </li>
-                <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-600 rounded-full" data-primary="yellow-400"><span class="text-sm font-bold">✓</span></span> Reabilitacija po operacijų&nbsp;
-                </li>
-                <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-600 rounded-full" data-primary="yellow-400"><span class="text-sm font-bold">✓</span></span> Reabilitacija po neurologinių ligų
-                </li>
-                <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-600 rounded-full" data-primary="yellow-400"><span class="text-sm font-bold">✓</span></span> Reabilitacija po insulto&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</li>
-                <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-600 rounded-full" data-primary="yellow-400"><span class="text-sm font-bold">✓</span></span> Reabilitacija po kitų ligų ir sutrikimų</li>
-            </ul>
-        </div>
-        <!-- End  Content -->
-    </div>
-    <div class="box-border flex flex-col items-center content-center px-8 mx-auto mt-2 leading-6 text-black border-0 border-gray-300 border-solid md:mt-20 xl:mt-0 md:flex-row max-w-7xl lg:px-16">
-
-        <!-- Content -->
-        <div class="box-border w-full text-black border-solid md:w-1/2 md:pl-6 xl:pl-32">
-            <h2 class="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">Kineziterapija</h2>
-            <p class="pt-4 pb-5 m-0 leading-7 text-gray-700 border-0 border-gray-300 sm:pr-10 lg:text-lg">Papasakokite savo kreipimosi užklausoje trumpai apie Jūsų kineziterapijos poreikį, diagnozę ar gydymo istoriją. Tinkamiausias Jūsų atveju specialistas sureaguos į Jūsų užklausą, suteiks trumpą konsultaciją telefonu, pakvies vizitui, informuos apie gydymo paslaugų sąlygas ir kainas.</p>
-            <ul class="p-0 m-0 leading-6 border-0 border-gray-300">
-                <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-600 rounded-full" data-primary="green-600"><span class="text-sm font-bold">✓</span></span> Kinizetarapija sąnarių skausmo atveju</li>
-                <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-600 rounded-full" data-primary="green-600"><span class="text-sm font-bold">✓</span></span> Kinizetarapija raumenų skausmo atveju</li>
-                <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-600 rounded-full" data-primary="green-600"><span class="text-sm font-bold">✓</span></span> Kinizetarapija skoliozės gydymo atveju</li>
-                               <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-600 rounded-full" data-primary="green-600"><span class="text-sm font-bold">✓</span></span> Kinizetarapija išvaržos gydymo atveju</li>
-                               <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-600 rounded-full" data-primary="green-600"><span class="text-sm font-bold">✓</span></span> Kinizetarapija stuburo skausmo atveju</li>
-                   
-                        <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-600 rounded-full" data-primary="yellow-400"><span class="text-sm font-bold">✓</span></span> Kinizetarapija kitų traumų ar ligų atveju</li>
-                    <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-600 rounded-full" data-primary="green-600"><span class="text-sm font-bold">✓</span></span> Kinizetarapija prieš arba po gimdymo</li>
-                    
-            </ul>
-        </div>
-        <!-- End  Content -->
-
-        <!-- Image -->
-        <div class="box-border relative w-full max-w-md px-4 mt-10 mb-4 text-center bg-no-repeat bg-contain border-solid md:mt-0 md:max-w-none lg:mb-0 md:w-1/2">
-            <img src="https://storage.mlcdn.com/account_image/215424/4y7U0lhqglbfAz6nxSnVLqTIye23RUzjbCVViCQM.png" class="pl-34 sm:pr-10 xl:pl-10 lg:pr-0">
-        </div>
-    </div>
-</section><section class="bg-gray-100">
-    <div class="w-full px-5 py-6 mx-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16 max-w-7xl">
-       
-        <div class="flex grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16">
-            <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
-                <a href="#_" class="block">
-                    <img class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56" src="https://storage.mlcdn.com/account_image/215424/z4MtP2NdsS7expDuncUGURjP7rdtNZvHSm4BUEbY.png">
-                </a>
-                <div class="bg-green-600 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
-                    <span class="">✓ TURIME SPECIALISTŲ</span>
-                </div>
-                <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="#_" class="">Gydomieji masažai</a></h2>
-                <p class="text-sm text-gray-500">Draugijoje turime gydomųjų masažų specialistų, kurie specializuojasi įvairiose masažo technikose, skirtose palengvinti skausmą, mažinti raumenų įtampą ir gerinti bendrą kūno sveikatą. Jų paslaugų spektras apima terapinį masažą, giliąją audinių masažą, refleksoterapiją ir kt.</p>
-               
-            </div>
-
-            <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
-                <a href="#_" class="block">
-                    <img class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56" src="https://storage.mlcdn.com/account_image/215424/eITVv95Oy1YJgoPOY7zOFZ6gayfXkIBFLwwwRnaK.png">
-                </a>
-                <div class="bg-green-600 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
-                    <span class="">✓ TURIME SPECIALISTŲ</span>
-                </div>
-                <h2 class="text-lg font-bold sm:text-xl md:text-2xl">Manualinė terapija</h2>
-                <p class="text-sm text-gray-500">Draugijoje turime manualinės terapijos specialistų, kurie naudoja rankų technikas gydymui. Jomis siekiama atkurti paciento sąnarių ir slankstelių tinkamą fiziologinę padėtį, kad būtų sugrąžinta judesių laisvė ir galima padėti gydant lėtinį nuovargį – fibromialgiją.</p>
-               
-            </div>
-
-            <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
-                <a href="#_" class="block">
-                    <img class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56" src="https://storage.mlcdn.com/account_image/215424/z4MtP2NdsS7expDuncUGURjP7rdtNZvHSm4BUEbY.png">
-                </a>
-                <div class="bg-green-600 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
-                    <span class="">✓ TURIME SPECIALISTŲ</span>
-                </div>
-                <h2 class="text-lg font-bold sm:text-xl md:text-2xl">Fizioterapija</h2>
-                <p class="text-sm text-gray-500">Draugijoje turime fizioterapijos specialistų, kurie naudoja fizinius metodus ir procedūras gydymui. Jie taiko įvairias terapines priemones, skirtas atkurti kūno funkcijas, sumažinti skausmą, pagerinti judėjimo apribojimus ir palengvinti pacientų gyvenimo kokybę.</p>
-             
-            </div>
-
-            <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
-                <a href="#_" class="block">
-                    <img class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56" src="https://storage.mlcdn.com/account_image/215424/z4MtP2NdsS7expDuncUGURjP7rdtNZvHSm4BUEbY.png">
-                </a>
-                <div class="bg-green-600 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
-                    <span class="">✓ TURIME SPECIALISTŲ</span>
-                </div>
-                <h2 class="text-lg font-bold sm:text-xl md:text-2xl">Taikomoji kineziologija</h2>
-                <p class="text-sm text-gray-500">Draugijoje turime taikomosios kineziologijos specialistų, kurie taiko specialius kūno judesių testavimo metodus siekdami nustatyti ir koreguoti judesių disbalansą bei raumenų funkcijos sutrikimus. Jie dirba siekdami pagerinti judesių efektyvumą, sumažinti skausmą ir pagerinti bendrą kūno funkcionavimą.</p>
-               
-            </div>
-
-            <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
-                <a href="#_" class="block">
-                    <img class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56" src="https://storage.mlcdn.com/account_image/215424/z4MtP2NdsS7expDuncUGURjP7rdtNZvHSm4BUEbY.png">
-                </a>
-                <div class="bg-green-600 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
-                    <span class="">✓ TURIME SPECIALISTŲ</span>
-                </div>
-                <h2 class="text-lg font-bold sm:text-xl md:text-2xl">Kinezioteipavimas</h2>
-                <p class="text-sm text-gray-500">Draugijoje turime kinezioteipavimo specialistų, kurie naudoja specialų elastingą tvarstį ant odos, siekdami palaikyti raumenų ir sąnarių funkciją, pagerinti kraujotaką, sumažinti skausmą ir greičiau atkurti sužeistų audinių funkciją. Kinezioteipavimas taip pat gali būti naudojamas pagerinti sportinį pasirodymą ir prevenciją.</p>
-               
-            </div>
-
-            <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
-                <a href="#_" class="block">
-                    <img class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56" src="https://storage.mlcdn.com/account_image/215424/z4MtP2NdsS7expDuncUGURjP7rdtNZvHSm4BUEbY.png">
-                </a>
-                <div class="bg-green-600 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
-                    <span class="">✓ TURIME SPECIALISTŲ</span>
-                </div>
-                <h2 class="text-lg font-bold sm:text-xl md:text-2xl">Osteopatija</h2>
-                <p class="text-sm text-gray-500">Draugijoje turime osteopatijos specialistų, kurie praktikuoja rankomis atliekamą gydymo metodą, skirtą pagerinti kūno funkcijas. Osteopatija siekiama atkurti kūno pusiausvyrą, pagerinti kraujotaką, mažinti skausmą ir skatinti natūralų gijimo procesą, atsižvelgiant į kūno struktūrų tarpusavio sąveiką.</p>
-         
-            </div>
-
-        </div>
-    </div>
-</section>
+<%- include('./_includes/components/detail_block.ejs', {
+    title: 'Mūsų draugai, kolegos ir partneriai',
+    subtitle: 'MUS REKOMENDUOJA',
+    text: `„Kineziterapeutai ir reabilitologai 🇱🇹” – didžiausia Lietuvoje Facebook grupė ir bendruomenė, skirta kineziterapijai ir reabilitacijai.
+    <br><br>
+    Deimantas Demenis – buvęs ilgametis krepšinio klubo „Žalgirio“ masažuotojas, dabar gydantis savo masažais privačių klientų kūną ir sielą.
+    <br><br>
+    „Kizi M“ – WEB platforma, kuri padeda nukreipti kineziterapijos pacientus pas tinkamus kineziteapeutus.
+    <br><br>
+    MB „Kūno tikslas“, UAB „Sveikatingumo ir terapijos studija“, „Menkoff Agency“, UAB „Ad Akta“, „Medforma“, Facebook grupė „Ieškau Kineziterapeuto • Reabilitologo • Masažuotojo“ ir kt.
+    `,
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/partners-logo.png',
+    id: 'mus-rekomenduoja',
+    bgColor: 'gray',
+    textPosition: 'left',
+}) %>
 
 <script src="//unpkg.com/alpinejs" defer></script>

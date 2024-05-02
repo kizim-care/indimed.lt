@@ -26,7 +26,21 @@
                     <%- title %>
                 </h4>
 
-                <p class="mx-auto text-base text-gray-600 lg:text-lg mb-6"><%- text %></p>
+                <div class="text-neutral-600 mb-8">
+                    <p class="mx-auto text-base lg:text-lg"><%- text %></p>
+    
+                    <% if (typeof list !== 'undefined') { %>
+                        <div class="flex flex-col gap-3 mt-6">
+                            <% list.forEach((item) => { %>
+                                <div class="flex items-center gap-2">
+                                    <div class="shrink-0 w-6 h-6 bg-green-600 rounded-full text-white flex items-center justify-center font-bold">✓</div>
+                                    <div><%- item %></div>
+                                </div>
+                            <% }) %>
+                        </div>
+                    <% } %>
+                </div>
+
                 <div class="relative flex flex-col sm:flex-row sm:space-x-4">
                     <a href="#_" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-green-600 rounded-md sm:mb-0 hover:bg-green-700 sm:w-auto" data-primary="indigo-600" data-rounded="rounded-md"> Palikti užklausą draugijai 
                     </a>

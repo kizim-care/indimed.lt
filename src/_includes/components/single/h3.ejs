@@ -1,0 +1,11 @@
+<%
+    let textColor = 'text-green-100';
+
+    if (typeof color !== 'undefined') {
+        if (color === 'green') {
+            textColor = 'text-green-600';
+        }
+    }
+%>
+
+<h3 class="text-base font-medium <%- textColor %> tracking-wide uppercase mb-6"><%- text %></h3>

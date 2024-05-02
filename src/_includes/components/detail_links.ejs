@@ -1,0 +1,64 @@
+<%
+    let items = [
+        {
+            title: 'Ar draugijoje geri specialistai?',
+            description: 'Kvalifikacija ir kompetencija',
+            href: '#kvalifikacija-ir-kompetencija',
+        },
+        {
+            title: 'Ką gydo draugijos specialistai?',
+            description: 'Gydymo kategorijos ir atvejai',
+            href: '#gydymo-kategorijos-ir-atvejai',
+        },
+        {
+            title: 'Ar yra vaikų/kūdikių specialistų?',
+            description: 'Pacientų amžiaus grupės',
+            href: '#pacientu-amziaus-grupes',
+        },
+        {
+            title: 'Kokia yra paslaugų kaina?',
+            description: 'Specialistų paslaugų kainos',
+            href: '#specialistu-paslaugu-kainos',
+        },
+        {
+            title: 'Kur randasi specialistai?',
+            description: 'Miestai, kuriuose vykdome veiklą',
+            href: '#miestai-kuriuose-vykdome-veikla',
+        },
+        {
+            title: 'O kas, jei  specialistas netiks?',
+            description: 'Netikusio specialisto atvejis',
+            href: '#netikusio-specialisto-atvejis',
+        },
+    ]
+%>
+
+<section class="px-8 py-32 bg-green-600">
+    <div class="max-w-7xl mx-auto">
+        <div class="items-center max-w-7xl mx-auto text-left md:text-center mb-14">
+            <%- include('./single/h3.ejs', {text: 'DAUGIAU INFORMACIJOS 👇'}) %>
+            <%- include('./single/h2.ejs', {text: 'Išsamiau apie „IndiMed”'}) %>
+            <div class="text-white lg:text-lg max-w-2xl m-auto mb-8">
+                Žemiau Jūsų dėmesiui pateikiame svarbiausią informaciją bei atsakymus į dažniausiai kylančius klausimus
+            </div>
+        </div>
+    
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 mt-10">
+            <% items.forEach((item) => { %>
+                <a href="<%- item.href %>">
+                    <div class="p-5 md:p-8 bg-white rounded-xl shadow-xl hover:bg-neutral-200 transition-colors">
+                        <h4 class="text-lg md:text-xl font-medium text-gray-700 mb-2 sm:mb-3"><%- item.title %></h4>
+                        <div class="flex items-center gap-2">
+                            <div class="text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                    <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
+                                </svg>                              
+                            </div>
+                            <span class="font-medium text-gray-500"><%- item.description %></span>
+                        </div>
+                    </div>
+                </a>
+            <% }) %>
+        </div>
+    </div>
+</section>

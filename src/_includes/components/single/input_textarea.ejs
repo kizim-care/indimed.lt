@@ -1,0 +1,18 @@
+<%
+    let randomId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+%>
+
+<div>
+    <%- include('label.ejs', {
+        id: randomId,
+        label: label,
+    }) %>
+    <textarea
+        x-model="<%- name %>"
+        id="<%- randomId %>"
+        name="<%- name %>"
+        class="base-input pl-4 border border-neutral-300 shadow"
+        rows="3"
+        placeholder="<%- placeholder %>"
+    ></textarea>
+</div>

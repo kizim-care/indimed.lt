@@ -9,7 +9,7 @@
     }) %>
     <div class="relative">
         <div class="border border-neutral-300 rounded-lg">
-            <select name="<%- name %>" id="<%- randomId %>" class="base-input select">
+            <select x-model="<%- name %>" name="<%- name %>" id="<%- randomId %>" class="base-input select">
                 <option value="" disabled="" selected><%- placeholder %></option>
                 <% options.forEach((option) => { %>
                     <option value="<%- option.value %>"><%- option.text %></option>

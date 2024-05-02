@@ -7,5 +7,12 @@
         id: randomId,
         label: label,
     }) %>
-    <textarea id="<%- randomId %>" name="<%- name %>" class="base-input pl-4 border border-neutral-300" rows="3" placeholder="<%- placeholder %>"></textarea>
+    <textarea
+        x-model="<%- name %>"
+        id="<%- randomId %>"
+        name="<%- name %>"
+        class="base-input pl-4 border border-neutral-300"
+        rows="3"
+        placeholder="<%- placeholder %>"
+    ></textarea>
 </div>

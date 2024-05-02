@@ -25,10 +25,19 @@ meta_title: 'Kineziterapeutai Vilniuje'
         _formFields.patientAge,
         _formFields.description,
         _formFields.canArrive,
-        _formFields.preferedLocation,
+        _formFields.preferedLocation, // <-- Conditional field
         _formFields.name,
         _formFields.email,
         _formFields.phone,
+        /*
+        {
+            type: 'hidden',
+            data: {
+                name: _formFields.canArrive.data.name,
+                value: _const.canArriveNo,
+            },
+        }
+        */
     ],
 }) %>
 

@@ -1,0 +1,58 @@
+<%
+    let list = [
+        {
+            image: 'https://kizim-lt.b-cdn.net/indimed.lt/gydomieji-masazai.png',
+            title: 'Gydomieji masažai',
+            description: 'Draugijoje turime gydomųjų masažų specialistų, kurie specializuojasi įvairiose masažo technikose, skirtose palengvinti skausmą, mažinti raumenų įtampą ir gerinti bendrą kūno sveikatą. Jų paslaugų spektras apima terapinį masažą, giliąją audinių masažą, refleksoterapiją ir kt.',
+        },
+        {
+            image: 'https://kizim-lt.b-cdn.net/indimed.lt/taikomoji-kineziologija.png',
+            title: 'Taikomoji kineziologija',
+            description: 'Draugijoje turime taikomosios kineziologijos specialistų, kurie taiko specialius kūno judesių testavimo metodus siekdami nustatyti ir koreguoti judesių disbalansą bei raumenų funkcijos sutrikimus. Jie dirba siekdami pagerinti judesių efektyvumą, sumažinti skausmą ir pagerinti bendrą kūno funkcionavimą.',
+        },
+        {
+            image: 'https://kizim-lt.b-cdn.net/indimed.lt/manualine-terapija.png',
+            title: 'Manualinė terapija',
+            description: 'Draugijoje turime manualinės terapijos specialistų, kurie naudoja rankomis atliekamą gydymo metodą. Tokiu būdu siekiama atkurti paciento sąnarių ir slankstelių tinkamą fiziologinę padėtį, kad būtų sugrąžinta judesių laisvė. Taip pat manualinė terapija gali padėti gydant lėtinį nuovargį – fibromialgiją.',
+        },
+        {
+            image: 'https://kizim-lt.b-cdn.net/indimed.lt/fizioterapija-v2.png',
+            title: 'Fizioterapija',
+            description: 'Draugijoje turime fizioterapijos specialistų, kurie naudoja fizinius metodus ir procedūras gydymui. Jie taiko įvairias terapines priemones, skirtas atkurti kūno funkcijas, sumažinti skausmą, palengvinti judėjimo apribojimus ir pagerinti bendrą pacientų gyvenimo kokybę.',
+        },
+        {
+            image: 'https://kizim-lt.b-cdn.net/indimed.lt/kinezioteipavimas.png',
+            title: 'Kinezioteipavimas',
+            description: 'Draugijoje turime kinezioteipavimo specialistų, kurie naudoja specialų elastingą tvarstį ant odos, siekdami palaikyti raumenų ir sąnarių funkciją, pagerinti kraujotaką, sumažinti skausmą ir greičiau atkurti sužeistų audinių funkciją. Kinezioteipavimas taip pat naudojamas siekiant pagerinti sportinių pasirodymų rezultatus.',
+        },
+        {
+            image: 'https://kizim-lt.b-cdn.net/indimed.lt/osteopatija.png',
+            title: 'Osteopatija',
+            description: 'Draugijoje turime osteopatijos specialistų, kurie praktikuoja rankomis atliekamą gydymo metodą, skirtą pagerinti kūno funkcijas. Osteopatija siekiama atkurti kūno pusiausvyrą, pagerinti kraujotaką, mažinti skausmą ir skatinti natūralų gijimo procesą, atsižvelgiant į kūno struktūrų tarpusavio sąveiką.',
+        }
+    ]
+%>
+
+<section class="bg-neutral-100 px-8 pb-32">
+    <div class="w-full mx-auto space-y-5 max-w-7xl">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
+            <% list.forEach((item) => { %>
+                <div class="flex flex-col items-start space-y-3">
+                    <img class="mb-2 rounded-lg w-full" src="<%- item.image %>">
+                    <div class="flex items-center rounded-full gap-2 pr-3">
+                        <div class="rounded-full bg-green-600 p-0.5">
+                            <div class="bg-white w-4 h-4 text-green-600 text-sm flex items-center justify-center rounded-full font-bold">✓</div>
+                        </div>
+                        <span class="text-green-600 font-semibold text-xs">TURIME SPECIALISTŲ</span>
+                    </div>
+                    <h3 class="text-lg font-semibold sm:text-xl md:text-2xl">
+                        <%- item.title %>
+                    </h3>
+                    <p class="text-gray-700">
+                        <%- item.description %>
+                    </p>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</section>

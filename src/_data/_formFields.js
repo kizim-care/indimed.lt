@@ -116,7 +116,7 @@ module.exports = {
             conditions: [
                 {
                     field: canArrive,
-                    value: _const.canArriveYes,
+                    value: _const.canArriveNo,
                 },
             ],
         },

@@ -24,19 +24,21 @@
             <div class="flex flex-col items-start justify-start basis-1/2">
                 <div
                     class="sm:p-12 sm:border border-neutral-100 rounded-xl sm:shadow-lg"
-                    x-data="{<% fields.forEach((field) => { %><%- field.data.name %>: '<%- field.data.value ?? '' %>', <% }) %>}"
+                    x-data="mainForm(<%= JSON.stringify(fields) %>)"
                 >
                     <h4 class="w-full text-3xl font-bold">Išbandykite</h4>
                     <p class="lg:text-lg text-gray-500">Tai patogu, tikslu ir greita</p>
-                    <form action="">
+                    <form @submit.prevent="post">
                         <div class="relative w-full mt-10 space-y-8">
                             <% fields.forEach((field) => { %>
                                 <%- include('./single/input_' + field.type + '.ejs', field.data) %>
                             <% }) %>
         
                             <div class="relative">
-                                <a href="#_" class="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-green-600 rounded-lg hover:bg-green-700 ease" data-primary="green-600" data-rounded="rounded-lg">Siųsti užklausą draugijai</a>
-                                                    <p class="w-full mt-4 text-sm text-center text-gray-500">Garantuojame visapusišką Jūsų asmens duomenų apsaugą ir konfidenciulumą pagal visus <a href="https://commission.europa.eu/law/law-topic/data-protection/reform/what-does-general-data-protection-regulation-gdpr-govern_lt" target="_blank" class="text-green-600 underline">BDAR</a> reglamento reikalavimus </p>
+                                <button type="submit" class="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-green-600 rounded-lg hover:bg-green-700 ease" data-primary="green-600" data-rounded="rounded-lg">
+                                    Siųsti užklausą draugijai
+                                </button>
+                                <p class="w-full mt-4 text-sm text-center text-gray-500">Garantuojame visapusišką Jūsų asmens duomenų apsaugą ir konfidenciulumą pagal visus <a href="https://commission.europa.eu/law/law-topic/data-protection/reform/what-does-general-data-protection-regulation-gdpr-govern_lt" target="_blank" class="text-green-600 underline">BDAR</a> reglamento reikalavimus </p>
                             </div>
                         </div>
                     </form>

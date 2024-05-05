@@ -8,11 +8,13 @@
         label: label,
     }) %>
     <textarea
-        x-model="fields.<%- name %>"
+        x-model="fields.<%- name %>.value"
         id="<%- randomId %>"
         name="<%- name %>"
-        class="base-input pl-4 border border-neutral-300 shadow"
+        :class="fields.<%- name %>.error ? 'border-red-400' : 'border-neutral-300'"
+        class="base-input pl-4 border shadow"
         rows="3"
         placeholder="<%- placeholder %>"
+        x-on:input="revalidateField('<%- name %>')"
     ></textarea>
 </div>

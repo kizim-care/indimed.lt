@@ -3,8 +3,6 @@ layout: layout.ejs
 meta_title: 'Kineziterapeutai Vilniuje'
 ---
 
-<%- include('./_includes/components/menu_top.ejs') %>
-
 <%- include('./_includes/components/hero.ejs', {
     title: 'Kineziterapeutai <span class="text-green-600">Vilniuje</span>',
 }) %>
@@ -24,6 +22,7 @@ meta_title: 'Kineziterapeutai Vilniuje'
     fields: [
         _formFields.patientAge,
         _formFields.description,
+        _formFields.city,
         _formFields.canArrive,
         _formFields.preferedLocation, // <-- Conditional field
         _formFields.name,

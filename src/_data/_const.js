@@ -8,4 +8,15 @@ module.exports = {
     canArriveYes: 'Taip > Galiu atvykti į nurodytą adresą',
     canArriveNo: 'Ne > Reikia specialisto į namus',
     canArriveUnknown: 'Nežinau > Noriu pasitarti su specialistu',
+
+    cityVilnius: 'Vilnius',
+    cityKaunas: 'Kaunas',
+    cityKlaipeda: 'Klaipėda',
+    citySiauliai: 'Šiauliai',
+    cityPanevezys: 'Panevėžys',
+    cityAlytus: 'Alytus',
+    cityMarijampole: 'Marijampolė',
+    cityUtena: 'Utena',
+    cityTaurage: 'Tauragė',
+    cityTelsiai: 'Telšiai',
 }

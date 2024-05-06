@@ -7,7 +7,7 @@ document.addEventListener('alpine:init', () => {
         loading: false,
         success: false,
         post() {
-            const emptyValidationFields = ['patientAge', 'description', 'canArrive', 'name', 'email', 'phone']
+            const emptyValidationFields = ['patientAge', 'description', 'city', 'canArrive', 'name', 'email', 'phone']
 
             for(let i = 0; i < emptyValidationFields.length; i++) {
                 if (this.fields[emptyValidationFields[i]].value === '') {
@@ -55,6 +55,7 @@ document.addEventListener('alpine:init', () => {
                 body: JSON.stringify({
                     patientAge: this.fields.patientAge.value,
                     description: this.fields.description.value,
+                    city: this.fields.city.value,
                     canArrive: this.fields.canArrive.value,
                     preferedLocation: this.fields.preferedLocation.value,
                     name: this.fields.name.value,
@@ -66,16 +67,16 @@ document.addEventListener('alpine:init', () => {
                 this.loading = false
 
                 this.success = true
+
+                Object.keys(this.fields).forEach((key) => {
+                    this.fields[key].value = ''
+                })
             }).catch(error => {
                 this.loading = false
 
                 this.hasErrors = true
 
                 this.errorMessages.push('Įvyko klaida, perkraukite puslapį ir bandykite dar kartą')
-            })
-
-            Object.keys(this.fields).forEach((key) => {
-                this.fields[key].value = ''
             })
         },
         revalidateField(name) {

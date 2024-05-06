@@ -11,7 +11,7 @@
         <input
             id="<%- randomId %>"
             type="<%- type %>"
-            name="<%- name %>"
+            x-model="fields.<%- name %>.value"
             placeholder="<%- typeof placeholder === 'undefined' ? '' : placeholder %>"
             class="base-input border border-neutral-300 ps-11 shadow"
         >

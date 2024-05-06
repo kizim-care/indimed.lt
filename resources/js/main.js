@@ -4,6 +4,8 @@ document.addEventListener('alpine:init', () => {
         conditionalFields: {},
         hasErrors: false,
         errorMessages: [],
+        loading: false,
+        success: false,
         post() {
             const emptyValidationFields = ['patientAge', 'description', 'canArrive', 'name', 'email', 'phone']
 
@@ -41,7 +43,40 @@ document.addEventListener('alpine:init', () => {
                 return
             }
 
-            console.log('Submit form');
+            this.loading = true
+
+            let url = 'https_colon__slash__slash_templid_dot_com_slash_webhooks_slash_31_slash_e31097ffb1abb98086698bd32d340cf0_slash_indimedlt';
+
+            url = url.replace(/_colon_/g, ':').replace(/_slash_/g, '/');
+
+            fetch(url.replace(/_dot_/g, '.'), {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    patientAge: this.fields.patientAge.value,
+                    description: this.fields.description.value,
+                    canArrive: this.fields.canArrive.value,
+                    preferedLocation: this.fields.preferedLocation.value,
+                    name: this.fields.name.value,
+                    email: this.fields.email.value,
+                    phone: this.fields.phone.value,
+                    templid: this.fields.templid.value === '' ? '7c619ed495dfeeac328da2f7ed3f1069' : this.fields.templid.value,
+                })
+            }).then(response => {
+                this.loading = false
+
+                this.success = true
+            }).catch(error => {
+                this.loading = false
+
+                this.hasErrors = true
+
+                this.errorMessages.push('Įvyko klaida, perkraukite puslapį ir bandykite dar kartą')
+            })
+
+            Object.keys(this.fields).forEach((key) => {
+                this.fields[key].value = ''
+            })
         },
         revalidateField(name) {
             this.fields[name].error = false
@@ -75,6 +110,8 @@ document.addEventListener('alpine:init', () => {
                     this.conditionalFields[field.data.name] = field.data.conditions
                 }
             })
+
+            this.fields.templid = {value: ''};
         }
     }))
 })

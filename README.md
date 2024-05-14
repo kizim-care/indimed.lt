@@ -1,9 +1,9 @@
 # indimed.lt
 
-## Run project locally
+## Start project locally
 
-On the first run, build a container with command `docker compose up -d`
+To start the project run command `make start` in your terminal.
 
-After use command `docker start indimed.lt`
+Now you can navigate to the url `localhost:8080` in your browser.
 
-Next run CSS watcher using `docker exec -it -u node indimed.lt npm run dev:css`
+To stop the project type `make stop`

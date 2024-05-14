@@ -14,8 +14,14 @@
         'https://kizim-lt.b-cdn.net/indimed.lt/D1APKpizTyH2Qb479MANwXqslEJDVDXHQ7a0vApW.webp',
     ];
 
+    let selfDescription = 'Palikite užklausą individualiai dirbančių Lietuvos sveikatingumo specialistų draugijai ir gaukite 100% dėmesį bei rūpestį savo gydymo atvejui!'
+
     if (typeof slides !== 'undefined') {
         selfSlides = slides;
+    }
+
+    if (typeof description !== 'undefined') {
+        selfDescription = description;
     }
 %>
 
@@ -27,7 +33,7 @@
                 <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-gray-900">
                     <%- title  %>
                 </h1>
-                <p class="text-base text-gray-500 lg:text-lg my-5 ld:my-8">Norite gauti 100% dėmesį ir rūpestį savo gydymo atvejui? Tuomet palikite užklausą nepriklausomų ir individualiai dirbančių Lietuvos sveikatingumo specialistų draugijai!</p>
+                <p class="text-base text-gray-500 lg:text-lg my-5 ld:my-8"><%- selfDescription %></p>
                 <div class="flex flex-col lg:flex-row gap-4">
                     <a href="#uzklausos-forma" class="flex items-center justify-center px-6 py-3 text-lg text-white bg-green-600 rounded-md hover:bg-green-700 transition-colors">
                         Palikti užklausą draugijai

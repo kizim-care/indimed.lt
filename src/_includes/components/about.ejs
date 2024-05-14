@@ -6,8 +6,14 @@
         'https://kizim-lt.b-cdn.net/indimed.lt/DjugcR8VKFIhK2cnyr7rMVau9X4k0yTlGD0iuPxJ.webp',
     ];
 
+    let selfDescription = 'Susibūrę į draugiją nepriklausomi bei individualiai dirbantys Lietuvos sveikatingumo specialistai, kurie laukia Jūsų užklausos'
+
     if (typeof slides !== 'undefined') {
         selfSlides = slides;
+    }
+
+    if (typeof description !== 'undefined') {
+        selfDescription = description;
     }
 %>
 
@@ -16,7 +22,7 @@
         <%- include('./single/h3.ejs', {text: 'Apie mus 👋'}) %>
         <%- include('./single/h2.ejs', {text: title}) %>
         <div class="text-white lg:text-lg max-w-2xl m-auto mb-8">
-            Susibūrę į draugiją nepriklausomi bei individualiai dirbantys Lietuvos sveikatingumo specialistai, kurie laukia Jūsų užklausos
+        <%- selfDescription %>
         </div>
         <div class="relative flex flex-col md:items-center">
             <a href="#apie-specialistus" class="flex items-center justify-center px-6 py-3 text-lg text-black bg-white-500 rounded-md hover:bg-gray-200 bg-white transition-colors">

@@ -5,7 +5,7 @@ module.exports = {
     patientUnder60: 'Suaugęs - iki 60 metų',
     patientOver60: 'Senjoras - 60+ metų',
 
-    canArriveYes: 'Taip > Galiu atvykti į nurodytą adresą',
+    canArriveYes: 'Taip > Galiu atvykti nurodytu adresu',
     canArriveNo: 'Ne > Reikia specialisto į namus',
     canArriveUnknown: 'Nežinau > Noriu pasitarti su specialistu',
 

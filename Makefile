@@ -1,6 +1,12 @@
+DEV_CSS_CMD = docker exec -it -d -u node indimed.lt npm run dev:css
+
 start:
 	docker compose up -d;
-	docker exec -it -d -u node indimed.lt npm run dev:css
+	$(DEV_CSS_CMD);
 
 stop:
-	docker stop indimed.lt;
+	docker compose stop;
+
+restart:
+	docker compose restart;
+	$(DEV_CSS_CMD);

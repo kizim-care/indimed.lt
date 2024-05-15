@@ -1,0 +1,179 @@
+---
+layout: layout.ejs
+meta_title: 'Geras kineziterapeutas Jūsų mieste'
+---
+
+<%- include(_system.componentsPath(page.inputPath, 'hero.ejs'), {
+    title: 'Geras kineziterapeutas <span class="text-green-600">Jūsų mieste</span>',
+    description: 'Palikite užklausą individualiai dirbančių Lietuvos kineziterapeutų draugijai ir gaukite 100% dėmesį bei rūpestį savo gydymo atvejui!',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'about.ejs'), {
+    title: 'Kas yra „IndiMed“?',
+    description: 'Susibūrę į draugiją nepriklausomi bei individualiai dirbantys Lietuvos kineziterapijos ir reabilitacijos specialistai, kurie laukia Jūsų užklausos',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'benefit_icons.ejs')) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'members.ejs'), {
+    title: 'Aktyviausi draugijos kineziterapeutai',
+    description: 'Jūsų dėmesiui – aktyviausi, labiausiai rekomenduojami bei greičiausiai reaguojantys „IndiMed“ draugijos kineziterapeutai',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'call_to_action.ejs')) %>
+
+
+<%- include(_system.componentsPath(page.inputPath, 'main_form.ejs'), {
+    description: 'Drąsiai siųskite savo užklausą draugijai „IndiMed” ir patirkite, ką reiškia būti priimtam individualaus ir motyvuoto kineziterapijos specialisto. Geriau vieną kartą išbandyti, nei šimtą kartų išgirsti!',
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/z4MtP2NdsS7expDuncUGURjP7rdtNZvHSm4BUEbY.webp',
+    fields: [
+        _formFields.patientAge,
+        _formFields.description,
+        _formFields.city,
+        _formFields.canArrive,
+        _formFields.preferedLocation, // <-- Conditional field
+        _formFields.name,
+        _formFields.email,
+        _formFields.phone,
+        /*
+        {
+            type: 'hidden',
+            data: {
+                name: _formFields.canArrive.data.name,
+                value: _const.canArriveNo,
+            },
+        }
+        */
+    ],
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'detail_links.ejs')) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'detail_block.ejs'), {
+    title: 'Ar draugijoje geri specialistai?',
+    subtitle: 'Kvalifikacija ir kompetencija',
+    text: '„IndiMed” draugija siekia laikytis aukščiausių gydymo paslaugų kokybės standartų. Visi draugijoje esantys specialistai turi tinkamą sveikatos ir medicininį išsilavinimą, taip pat galiojančias licencijas bei leidimus vykdyti veiklą. Į draugiją susibūrė profesionalūs, motyvuoti ir nuolat savo kvalifikaciją ir kompetenciją keliantys specialistai.',
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/indimed-geri-specialsitai.png',
+    id: 'kvalifikacija-ir-kompetencija',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'detail_block.ejs'), {
+    title: 'Ką gydo draugijos specialistai?',
+    subtitle: 'GYDYMO KATEGORIJOS IR ATVEJAI',
+    text: 'Paprasčiau būtų atsakyti, ko negydo „IndiMed” draugijoje esantys specialistai. Kodėl? Nes draugijos narių ir skirtingų kompetencijų specialistų sąrašas nuolat auga. Draugijoje turime įvairių rūšių bei kategorijų reabilitacijos specialistų, kineziterapeutų, manualinių terapeutų, osteopatų, gydomųjų masažų meistrų, kūdikių ir vaikų raidos sutrikimų gydymo terapeutų. Paprasčiausias ir greičiausias būdas sužinoti, ar turime draugijoje reikiamą Jums specialistą, yra pateikti užklausą draugijai.',
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/indimed-duk-002.png',
+    id: 'gydymo-kategorijos-ir-atvejai',
+    bgColor: 'gray',
+    textPosition: 'left',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'detail_block2.ejs'), {
+    title: 'Reabilitacija',
+    text: 'Papasakokite savo kreipimosi užklausoje trumpai apie Jūsų patirtą traumą, operaciją, sutrikimą ar ligą. Tinkamiausias Jūsų atveju specialistas sureaguos į Jūsų užklausą, suteiks trumpą konsultaciją telefonu, pakvies vizitui, informuos apie gydymo paslaugų sąlygas ir kainas.',
+    list: [
+        'Reabilitacija po traumų',
+        'Reabilitacija po kaulų lūžių',
+        'Reabilitacija po operacijų',
+        'Reabilitacija po neurologinių ligų',
+        'Reabilitacija po insulto',
+        'Reabilitacija po kitų ligų ir sutrikimų',
+    ],
+    image: 'https://storage.mlcdn.com/account_image/215424/HgCfNwUREFhfZVVXbRdjyHqhWwyx3kieSTQ3SHOm.png',
+    bgColor: 'gray',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'detail_block2.ejs'), {
+    title: 'Kineziterapija',
+    text: 'Papasakokite savo kreipimosi užklausoje trumpai apie Jūsų kineziterapijos poreikį, diagnozę ar gydymo istoriją. Tinkamiausias Jūsų atveju specialistas sureaguos į Jūsų užklausą, suteiks trumpą konsultaciją telefonu, pakvies vizitui, informuos apie gydymo paslaugų sąlygas ir kainas.',
+    list: [
+        'Kinizetarapija sąnarių skausmo atveju',
+        'Kinizetarapija raumenų skausmo atveju',
+        'Kinizetarapija skoliozės gydymo atveju',
+        'Kinizetarapija išvaržos gydymo atveju',
+        'Kinizetarapija stuburo skausmo atveju',
+        'Kinizetarapija kitų traumų ar ligų atveju',
+        'Kinizetarapija prieš arba po gimdymo',
+    ],
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/PLy4IGI1qzehdpZihyvxgl9VfAR85Bt8w4JBdbi1.webp',
+    bgColor: 'gray',
+    textPosition: 'left',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'services.ejs')) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'detail_block.ejs'), {
+    title: 'Ar yra vaikų/kūdikių specialistų?',
+    subtitle: 'Priimamų pacientų amžius',
+    text: '„IndiMed” draugijoje turime specialistų, dirbančių ir besispecializuojančių su įvairiomis amžiaus grupėmis, nuo kūdikių iki vyresnio amžiaus žmonių. „IndiMed” draugija pasiruošusi teikti kokybiškas gydymo paslaugas ir pagalbą visiems, nepriklausomai nuo amžiaus ar sveikatos būklės.',
+    list: [
+        'Kūdikiai iki 1 metų',
+        'Vaikai nuo 1 iki 7 metų',
+        'Paaugliai nuo 7 iki 18 metų',
+        'Suaugusieji nuo 18 metų',
+        'Vyresnio amžiaus žmonės',
+    ],
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/age-groups.png',
+    id: 'pacientu-amziaus-grupes',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'detail_block.ejs'), {
+    title: 'Kokia yra paslaugų kaina?',
+    subtitle: 'SPECIALISTŲ PASLAUGŲ KAINOS',
+    text: 'Draugijos specialistų kainos yra tikrai prieinamos ir draugiškos. Tai dėl to, kad Jūs kreipiatės ne į brangiausias ir išreklamuotas klinikas, o tiesiogiai į individualiai dirbančius specialistus. Primename, kad kreipdamiesi į privačias dideles klinikas, į paslaugų kainą įeina reklamos išlaidos, brangi patalpų nuoma ir kiti papildomi administraciniai mokesčiai. Kreipiantis į individualiai dirbančius specialistus, Jūs išvengiate šių perteklinių mokesčių. Draugijoje esančių specialistų paslaugų kainos svyruoja nuo €19 iki €60 už valandą. Vidutinė paslaugų kaina yra apie €30-40 už valandą. Galutinė kaina priklauso nuo gydymo procedūros sudėtingumo, paslaugos tipo bei konkretaus specialisto kvalifikacijos. Paprasčiausias ir greičiausias būdas sužinoti, ar turime draugijoje reikiamą specialistą už komfortišką Jums kainą, yra pateikti užklausą draugijai.',
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/kinezi-paslaugu-kaina.png',
+    id: 'specialistu-paslaugu-kainos',
+    bgColor: 'gray',
+    textPosition: 'left',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'detail_block.ejs'), {
+    title: 'Kur randasi specialistai?',
+    subtitle: 'Miestai, kuriuose vykdome veiklą',
+    text: '„IndiMed” draugijoje turime specialistų, dirbančių įvairiose Lietuvos vietovėse. Naujų miestų ir vietovių sąrašas nuolat plečiasi. Paprasčiausias ir greičiausias būdas sužinoti, ar turime draugijoje reikiamą specialistą Jūsų ieškomoje vietovėje, yra pateikti užklausą draugijai.',
+    list: [
+        'Vilnius',
+        'Kaunas',
+        'Klaipėda',
+        'Šiauliai',
+        'Panevėžys',
+        'Alytus',
+        'Kiti miestai',
+    ],
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/veiklos-miestai.png',
+    id: 'miestai-kuriuose-vykdome-veikla',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'detail_block.ejs'), {
+    title: 'O kas, jei specialistas netiks?',
+    subtitle: 'Netikusio specialisto atveju',
+    text: 'Mes nuolat tobuliname „IndiMed” draugijos organizaciją siekdami užtikrinti, kad Jūsų užklausa būtų kuo sėkmingiau patenkinta jau pirmuoju bandymu. Tačiau jei dėl kokių nors priežasčių nepavyksta susitarti su specialistu, kuris priėmė Jūsų užklausą, tai nėra problema. Galite į mus vėl kreiptis pateikiant papildomą informaciją. Taip suteiksite galimybę priimti Jūsų užklausą naujam draugijos nariui, kuris galbūt bus Jums tinkamesnis. Svarbu pabrėžti, kad gana retai nepavyksta patenkinti užklausos po antrojo bandymo. Mūsų draugija veikia bendradarbiavimo ir profesionalios darbo etikos principais, todėl siekiame užtikrinti, kad kiekvienas žmogus būtų aptarnautas kuo geriau.',
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/jei-netiks-specialsitas.png',
+    id: 'netikusio-specialisto-atvejis',
+    bgColor: 'gray',
+    textPosition: 'left',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'detail_block.ejs'), {
+    title: 'Kodėl verta kreiptis?',
+    subtitle: '100% DĖMESYS JŪSŲ ATVEJUI',
+    text: 'Didelėse privačiose klinikose dažniausiai kainos labai kandžiojasi. Taipogi dėl didelio pacientų srauto, deja, Jums suteikiamas bendras dėmesys. Kreipdamiesi į individualiai dirbantį specialistą, Jūs gaunate individualų 100% dėmesį, skirtą būtent Jūsų gydymo atvejui. Yra įsigilinama į Jūsų atvejo visas detales ir taikoma nuosekli bei unikali Jūsų gydymo eiga. Kiekvienas individualiai dirbantis specialistas puoselėja savo reputaciją ir vardą, jis yra motyvuotas suteikti Jums maksimaliai vertingą gydymo paslaugą. Palikdami užklausą mūsų draugijai, Jūs tikrai niekuo nerizikuojate ir nieko neprarandate. Kviečiame patirti, ką reiškia būti priimtam individualaus ir motyvuoto specialisto.',
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/kode-verta-kreiptis.png',
+    id: 'kodel-verta-kreiptis',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'detail_block.ejs'), {
+    title: 'Mūsų draugai, kolegos ir partneriai',
+    subtitle: 'MUS REKOMENDUOJA',
+    text: `„Kineziterapeutai ir reabilitologai 🇱🇹” – didžiausia Lietuvoje Facebook grupė ir bendruomenė, skirta kineziterapijai ir reabilitacijai.
+    <br><br>
+    Deimantas Demenis – buvęs ilgametis krepšinio klubo „Žalgirio“ masažuotojas, dabar gydantis savo masažais privačių klientų kūną ir sielą.
+    <br><br>
+    „Kizi M“ – WEB platforma, kuri padeda nukreipti kineziterapijos pacientus pas tinkamus kineziteapeutus.
+    <br><br>
+    MB „Kūno tikslas“, UAB „Sveikatingumo ir terapijos studija“, „Menkoff Agency“, UAB „Ad Akta“, „Medforma“, Facebook grupė „Ieškau Kineziterapeuto • Reabilitologo • Masažuotojo“ ir kt.
+    `,
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/partners-logo.png',
+    id: 'mus-rekomenduoja',
+    bgColor: 'gray',
+    textPosition: 'left',
+}) %>

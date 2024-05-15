@@ -11,23 +11,22 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("resources/js/*");
 
-
   eleventyConfig.addGlobalData("cachVersion", Date.now());
 
   eleventyConfig.addTransform("htmlmin", function (content) {
-		if (isProduction && (this.page.outputPath || "").endsWith(".html")) {
-			let minified = htmlmin.minify(content, {
-				useShortDoctype: true,
-				removeComments: true,
-				collapseWhitespace: true,
+    if (isProduction && (this.page.outputPath || "").endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
         minifyJS: true,
-			});
+      });
 
-			return minified;
-		}
+      return minified;
+    }
 
-		return content;
-	});
+    return content;
+  });
 
   return {
     dir: {

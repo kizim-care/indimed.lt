@@ -1,10 +1,10 @@
 ---
 layout: layout.ejs
-meta_title: 'Kineziterapeutas į namus Vilniuje'
+meta_title: 'Kineziterapija namuose Jūsų mieste'
 ---
 
 <%- include(_system.componentsPath(page.inputPath, 'hero.ejs'), {
-    title: 'Kineziterapeutas į namus <span class="text-green-600">Vilniuje</span>',
+    title: 'Kineziterapija namuose <span class="text-green-600">Jūsų mieste</span>',
     description: 'Palikite užklausą individualiai dirbančių Lietuvos kineziterapeutų draugijai ir gaukite 100% dėmesį bei rūpestį savo gydymo atvejui!',
 }) %>
 
@@ -28,24 +28,21 @@ meta_title: 'Kineziterapeutas į namus Vilniuje'
     fields: [
         _formFields.patientAge,
         _formFields.description,
-        {
-            type: 'hidden',
-            data: {
-                name: _formFields.city.data.name,
-                value: _const.cityVilnius,
-            },
-        },
+        _formFields.city,
+        _formFields.canArrive,
+        _formFields.preferedLocation, // <-- Conditional field
+        _formFields.name,
+        _formFields.email,
+        _formFields.phone,
+        /*
         {
             type: 'hidden',
             data: {
                 name: _formFields.canArrive.data.name,
                 value: _const.canArriveNo,
             },
-        },
-        _formFields.preferedLocation, // <-- Conditional field
-        _formFields.name,
-        _formFields.email,
-        _formFields.phone,
+        }
+        */
     ],
 }) %>
 

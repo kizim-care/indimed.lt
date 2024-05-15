@@ -3,7 +3,7 @@ layout: layout.ejs
 meta_title: 'Kineziterapeutai į namus Vilniuje'
 ---
 
-<%- include('./_includes/components/hero.ejs', {
+<%- include(_system.componentsPath(page.inputPath, 'hero.ejs'), {
     title: 'Kineziterapeutai į namus <span class="text-green-600">Vilniuje</span>',
     description: 'Palikite užklausą individualiai dirbančių Lietuvos kineziterapeutų draugijai ir gaukite 100% dėmesį bei rūpestį savo gydymo atvejui!',
 }) %>

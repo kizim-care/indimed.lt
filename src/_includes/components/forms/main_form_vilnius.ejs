@@ -1,0 +1,33 @@
+<%
+    let selfDescription = 'Drąsiai siųskite savo užklausą draugijai „IndiMed” ir patirkite, ką reiškia būti priimtam individualaus ir motyvuoto kineziterapijos specialisto. Geriau vieną kartą išbandyti, nei šimtą kartų išgirsti!'
+    let selfImage = 'https://kizim-lt.b-cdn.net/indimed.lt/z4MtP2NdsS7expDuncUGURjP7rdtNZvHSm4BUEbY.webp'
+
+    if (typeof description !== 'undefined' && description.length > 0) {
+        selfDescription = description;
+    }
+
+    if (typeof image !== 'undefined' && image.length > 0) {
+        selfImage = image;
+    }
+%>
+
+<%- include('../main_form.ejs', {
+    description: selfDescription,
+    image: selfImage,
+    fields: [
+        _formFields.patientAge,
+        _formFields.description,
+        {
+            type: 'hidden',
+            data: {
+                name: _formFields.city.data.name,
+                value: _const.cityVilnius,
+            },
+        },
+        _formFields.canArrive,
+        _formFields.preferedLocation, // <-- Conditional field
+        _formFields.name,
+        _formFields.email,
+        _formFields.phone,
+    ],
+}) %>

@@ -1,6 +1,7 @@
 ---
 layout: layout.ejs
 meta_title: 'Reabilitologas Pašilaičiai | Vilnius'
+canonical: '/reabilitologai/vilnius/pasilaiciai/'
 ---
 
 <%- include(_system.componentsPath(page.inputPath, 'hero.ejs'), {
@@ -22,30 +23,7 @@ meta_title: 'Reabilitologas Pašilaičiai | Vilnius'
 
 <%- include(_system.componentsPath(page.inputPath, 'call_to_action.ejs')) %>
 
-
-<%- include(_system.componentsPath(page.inputPath, 'main_form.ejs'), {
-    description: 'Drąsiai siųskite savo užklausą draugijai „IndiMed” ir patirkite, ką reiškia būti priimtam individualaus ir motyvuoto reabilitacijos specialisto. Geriau vieną kartą išbandyti, nei šimtą kartų išgirsti!',
-    image: 'https://kizim-lt.b-cdn.net/indimed.lt/z4MtP2NdsS7expDuncUGURjP7rdtNZvHSm4BUEbY.webp',
-    fields: [
-        _formFields.patientAge,
-        _formFields.description,
-        _formFields.city,
-        _formFields.canArrive,
-        _formFields.preferedLocation, // <-- Conditional field
-        _formFields.name,
-        _formFields.email,
-        _formFields.phone,
-        /*
-        {
-            type: 'hidden',
-            data: {
-                name: _formFields.canArrive.data.name,
-                value: _const.canArriveNo,
-            },
-        }
-        */
-    ],
-}) %>
+<%- include(_system.componentsPath(page.inputPath, 'forms/main_form_vilnius.ejs')) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'detail_links.ejs')) %>
 

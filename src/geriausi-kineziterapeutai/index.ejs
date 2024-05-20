@@ -4,27 +4,28 @@ meta_title: 'Geriausi kineziterapeutai Jūsų mieste'
 ---
 
 <%- include(_system.componentsPath(page.inputPath, 'hero.ejs'), {
-    title: 'Geriausi kineziterapeutai <span class="text-green-600">Jūsų mieste</span>',
-    description: 'Palikite užklausą individualiai dirbančių Lietuvos kineziterapeutų draugijai ir gaukite 100% dėmesį bei rūpestį savo gydymo atvejui!',
+    pre_title: 'KINEZITERAPEUTŲ DRAUGIJA 🇱🇹',
+    title: 'Geriausi kineziterapeutai <span class="text-green-600"><br>Jūsų mieste</span>',
+    description: 'Aprašykite užklausoje Jūsų patirtą traumą, ligą ar sutrikimą. Į užklausą sureaguos Jūsų atveju tinkamiausias kineziterapeutas, kuris telefonu suteiks trumpą konsultaciją ir gydymo rekomendacijas. Jei reikės, paskirs Jums vizitą ir suteiks gydymo paslaugas Jūsų mieste.',
 }) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'about.ejs'), {
     title: 'Kas yra „IndiMed“?',
-    description: 'Susibūrę į draugiją nepriklausomi bei individualiai dirbantys Lietuvos kineziterapijos ir reabilitacijos specialistai, kurie laukia Jūsų užklausos',
+    description: 'Lietuvos kineziterapeutai, susibūrę į draugiją bei pasirengę suteikti Jums profesionalias gydymo rekomendacijas ir paslaugas Jūsų mieste',
 }) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'benefit_icons.ejs')) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'members.ejs'), {
     title: 'Aktyviausi draugijos kineziterapeutai',
-    description: 'Jūsų dėmesiui – aktyviausi, labiausiai rekomenduojami bei greičiausiai reaguojantys „IndiMed“ draugijos kineziterapeutai',
+    description: 'Labiausiai pacientų rekomenduojami „IndiMed“ draugijos kineziterapeutai yra pasiruošę suteikti Jums trumpą įvadinę konsultaciją telefonu su gydymo rekomendacijomis',
 }) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'call_to_action.ejs')) %>
 
 
 <%- include(_system.componentsPath(page.inputPath, 'main_form.ejs'), {
-    description: 'Drąsiai siųskite savo užklausą draugijai „IndiMed” ir patirkite, ką reiškia būti priimtam individualaus ir motyvuoto kineziterapijos specialisto. Geriau vieną kartą išbandyti, nei šimtą kartų išgirsti!',
+    description: 'Į Jūsų užklausą sureaguos tinkamiausias „IndiMed“ draugijos kineziterapeutas, kuris telefonu suteiks trumpą konsultaciją ir gydymo rekomendacijas. Jei reikės, paskirs vizitą ir suteiks gydymo paslaugas Jūsų mieste.',
     image: 'https://kizim-lt.b-cdn.net/indimed.lt/z4MtP2NdsS7expDuncUGURjP7rdtNZvHSm4BUEbY.webp',
     fields: [
         _formFields.patientAge,

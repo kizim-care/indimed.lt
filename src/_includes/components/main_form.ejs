@@ -1,5 +1,5 @@
 <%
-    let selfDescription = 'Drąsiai siųskite savo užklausą draugijai „IndiMed” ir patirkite, ką reiškia būti priimtam individualaus ir motyvuoto specialisto. Geriau vieną kartą išbandyti, nei šimtą kartų išgirsti!'
+    let selfDescription = 'Į Jūsų užklausą sureaguos tinkamiausias „IndiMed“ draugijos sveikatingumo specialistas, kuris telefonu suteiks trumpą konsultaciją ir gydymo rekomendacijas. Jei reikės, paskirs Jums vizitą ir suteiks gydymo paslaugas Jūsų mieste.'
 
     if (typeof description !== 'undefined') {
         selfDescription = description;
@@ -13,7 +13,7 @@
                 <div class="tracking-tight">
                     <div>
                         <%- include('./single/h3.ejs', {
-                            text: '100% DĖMESYS JŪSŲ ATVEJUI 👌',
+                            text: 'PATOGU, VERTA IR NEĮPAREIGOJA 👌',
                             color: 'green',
                         }) %>
 
@@ -23,8 +23,10 @@
                         }) %>
                     </div>
 
-                    <p class="text-gray-700 sm:text-lg lg:text-xl mb-5"><%- selfDescription %></p>
-
+                    <p class="text-gray-700 sm:text-lg lg:text-xl mb-5" style="display: inline-block;">
+                        <%- selfDescription %>
+                    </p>
+                    
                     <img src="<%- image %>" class="w-full">
                 </div>
             </div>
@@ -35,7 +37,7 @@
                     x-data="mainForm(<%= JSON.stringify(fields) %>)"
                 >
                     <h4 class="w-full text-3xl font-bold">Išbandykite</h4>
-                    <p class="lg:text-lg text-gray-500">Tai patogu, tikslu ir greita</p>
+                    <p class="lg:text-lg text-gray-500">Tereikia užpildyti formą žemiau</p>
                     <form @submit.prevent="post">
                         <div class="relative w-full mt-10 space-y-8">
                             <% fields.forEach((field) => { %>
@@ -54,6 +56,9 @@
                                         class="w-5 h-5 rounded-full border-4 border-l-white/50 border-r-white/50 border-b-white/50 border-t-white animate-spin"
                                     ></div>
                                     <span>Siųsti užklausą draugijai</span>
+                                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="m10.051 8.102-3.778.322-1.994 1.994a.94.94 0 0 0 .533 1.6l2.698.316m8.39 1.617-.322 3.78-1.994 1.994a.94.94 0 0 1-1.595-.533l-.4-2.652m8.166-11.174a1.366 1.366 0 0 0-1.12-1.12c-1.616-.279-4.906-.623-6.38.853-1.671 1.672-5.211 8.015-6.31 10.023a.932.932 0 0 0 .162 1.111l.828.835.833.832a.932.932 0 0 0 1.111.163c2.008-1.102 8.35-4.642 10.021-6.312 1.475-1.478 1.133-4.77.855-6.385Zm-2.961 3.722a1.88 1.88 0 1 1-3.76 0 1.88 1.88 0 0 1 3.76 0Z"/>
+                                      </svg>
                                 </button>
 
                                 <div x-cloak x-show="hasErrors"

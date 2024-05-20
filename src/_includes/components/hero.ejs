@@ -1,4 +1,23 @@
 <%
+
+    let preTitle = 'INDIVIDUALIŲ SPECIALISTŲ DRAUGIJA 🇱🇹'
+
+    if (typeof pre_title !== 'undefined') {
+        preTitle = pre_title;
+    }
+
+    let selfDescription = 'Aprašykite užklausoje Jūsų patirtą traumą, ligą ar sutrikimą. Į užklausą sureaguos Jūsų atveju tinkamiausias specialistas, kuris telefonu suteiks trumpą konsultaciją ir gydymo rekomendacijas. Jei reikės, paskirs Jums vizitą ir suteiks gydymo paslaugas.'
+
+    if (typeof description !== 'undefined') {
+        selfDescription = description;
+    }
+
+    let button_hero = 'Noriu pateikti užklausą'
+
+    if (typeof button !== 'undefined') {
+        button_hero = button;
+    }
+
     let selfSlides = [
         'https://kizim-lt.b-cdn.net/indimed.lt/HgCfNwUREFhfZVVXbRdjyHqhWwyx3kieSTQ3SHOm.webp',
         'https://kizim-lt.b-cdn.net/indimed.lt/JIdu4oa1Uqyno22KozVhFbioDx0VTMB4Me7CJtAz.webp',
@@ -12,16 +31,10 @@
         'https://kizim-lt.b-cdn.net/indimed.lt/PLy4IGI1qzehdpZihyvxgl9VfAR85Bt8w4JBdbi1.webp',
         'https://kizim-lt.b-cdn.net/indimed.lt/MmAMH7PChOVYMHwV1lEWneV3hAX8Vl2pClESAyDt.webp',
         'https://kizim-lt.b-cdn.net/indimed.lt/D1APKpizTyH2Qb479MANwXqslEJDVDXHQ7a0vApW.webp',
-    ];
+     ];
 
     if (typeof slides !== 'undefined') {
         selfSlides = slides;
-    }
-
-    let selfDescription = 'Palikite užklausą individualiai dirbančių Lietuvos sveikatingumo specialistų draugijai ir gaukite 100% dėmesį bei rūpestį savo gydymo atvejui!'
-
-    if (typeof description !== 'undefined') {
-        selfDescription = description;
     }
 %>
 
@@ -29,14 +42,15 @@
     <div class="container items-center max-w-7xl mx-auto">
         <div class="flex flex-col lg:flex-row items-center gap-20">
             <div class="lg:w-1/2">
-                <p class="font-medium text-gray-700 uppercase text-sm md:text-base mb-2">INDIVIDUALIŲ SPECIALISTŲ DRAUGIJA 🇱🇹</p>
+                <p class="font-medium text-gray-700 uppercase text-sm md:text-base mb-2"><%- preTitle %></p>
                 <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-gray-900">
                     <%- title  %>
                 </h1>
                 <p class="text-base text-gray-500 lg:text-lg my-5 ld:my-8"><%- selfDescription %></p>
                 <div class="flex flex-col lg:flex-row gap-4">
                     <a href="#uzklausos-forma" class="flex items-center justify-center px-6 py-3 text-lg text-white bg-green-600 rounded-md hover:bg-green-700 transition-colors">
-                        Palikti užklausą draugijai
+                        <%- button_hero  %>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-6 w-6 ml-2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"></path></svg>
                     </a>
                     <a href="#apie-mus" class="shrink-0 flex items-center justify-center px-6 py-3 text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors">
                         Sužinoti daugiau

@@ -6,7 +6,7 @@
         'https://kizim-lt.b-cdn.net/indimed.lt/DjugcR8VKFIhK2cnyr7rMVau9X4k0yTlGD0iuPxJ.webp',
     ];
 
-    let selfDescription = 'Susibūrę į draugiją nepriklausomi bei individualiai dirbantys Lietuvos sveikatingumo specialistai, kurie laukia Jūsų užklausos'
+    let selfDescription = 'Lietuvos reabilitacijos ir sveikatingumo specialistai, susibūrę į draugiją bei pasirengę suteikti Jums profesionalias gydymo rekomendacijas ir paslaugas'
 
     if (typeof slides !== 'undefined') {
         selfSlides = slides;
@@ -14,6 +14,12 @@
 
     if (typeof description !== 'undefined') {
         selfDescription = description;
+    }
+
+    let button_about = 'Plačiau apie specialistus'
+
+    if (typeof button !== 'undefined') {
+        button_about = button;
     }
 %>
 
@@ -26,11 +32,10 @@
         </div>
         <div class="relative flex flex-col md:items-center">
             <a href="#apie-specialistus" class="flex items-center justify-center px-6 py-3 text-lg text-black bg-white-500 rounded-md hover:bg-gray-200 bg-white transition-colors">
-                Sužinoti daugiau
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12" class=""></line>
-                    <polyline points="12 5 19 12 12 19" class=""></polyline>
-                </svg>
+                <%- button_about %>
+                  <svg class="h-6 w-6 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4.5 17H4a1 1 0 0 1-1-1 3 3 0 0 1 3-3h1m0-3.05A2.5 2.5 0 1 1 9 5.5M19.5 17h.5a1 1 0 0 0 1-1 3 3 0 0 0-3-3h-1m0-3.05a2.5 2.5 0 1 0-2-4.45m.5 13.5h-7a1 1 0 0 1-1-1 3 3 0 0 1 3-3h3a3 3 0 0 1 3 3 1 1 0 0 1-1 1Zm-1-9.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"/>
+                  </svg>
             </a>
         </div>
     </div>

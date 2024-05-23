@@ -72,8 +72,6 @@ document.addEventListener('alpine:init', () => {
 
                 if (typeof gtag === 'function') {
                     gtag("event", "generate_lead");
-
-                    console.log('event works');
                 }
             }).catch(error => {
                 this.loading = false

@@ -12,6 +12,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("resources/js/*");
 
   eleventyConfig.addGlobalData("cachVersion", Date.now());
+  eleventyConfig.addGlobalData("isProduction", isProduction);
 
   eleventyConfig.addTransform("htmlmin", function (content) {
     if (isProduction && (this.page.outputPath || "").endsWith(".html")) {

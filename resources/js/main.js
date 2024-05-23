@@ -45,11 +45,9 @@ document.addEventListener('alpine:init', () => {
 
             this.loading = true
 
-            let url = 'https_colon__slash__slash_templid_dot_com_slash_webhooks_slash_31_slash_e31097ffb1abb98086698bd32d340cf0_slash_indimedlt';
+            fetchLink = formLink.replace(/_colon_/g, ':').replace(/_slash_/g, '/').replace(/_dot_/g, '.');
 
-            url = url.replace(/_colon_/g, ':').replace(/_slash_/g, '/');
-
-            fetch(url.replace(/_dot_/g, '.'), {
+            fetch(fetchLink, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -71,6 +69,12 @@ document.addEventListener('alpine:init', () => {
                 Object.keys(this.fields).forEach((key) => {
                     this.fields[key].value = ''
                 })
+
+                if (typeof gtag === 'function') {
+                    gtag("event", "generate_lead");
+
+                    console.log('event works');
+                }
             }).catch(error => {
                 this.loading = false
 

@@ -9,6 +9,13 @@ meta_title: 'Individuali kineziterapija Vilniuje'
     description: 'Aprašykite užklausoje Jūsų patirtą traumą, ligą ar sutrikimą. Į užklausą sureaguos Jūsų atveju tinkamiausias kineziterapeutas, kuris telefonu suteiks trumpą konsultaciją ir gydymo rekomendacijas. Jei reikės, paskirs Jums vizitą ir suteiks gydymo paslaugas Vilniuje.',
 }) %>
 
+<%- include(_system.componentsPath(page.inputPath, 'call_to_action.ejs')) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'forms/main_form_vilnius.ejs'), {
+    description: 'Į Jūsų užklausą sureaguos tinkamiausias „IndiMed“ draugijos kineziterapeutas, kuris telefonu suteiks trumpą konsultaciją ir gydymo rekomendacijas. Jei reikės, paskirs vizitą ir suteiks gydymo paslaugas Vilniuje.',
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/z4MtP2NdsS7expDuncUGURjP7rdtNZvHSm4BUEbY.webp',
+}) %>
+
 <%- include(_system.componentsPath(page.inputPath, 'about.ejs'), {
     title: 'Kas yra „IndiMed“?',
     description: 'Vilniaus kineziterapeutai, susibūrę į draugiją bei pasirengę suteikti Jums profesionalias gydymo rekomendacijas ir paslaugas',
@@ -19,13 +26,6 @@ meta_title: 'Individuali kineziterapija Vilniuje'
 <%- include(_system.componentsPath(page.inputPath, 'members.ejs'), {
     title: 'Aktyviausi draugijos kineziterapeutai',
     description: 'Labiausiai pacientų rekomenduojami „IndiMed“ draugijos kineziterapeutai yra pasiruošę suteikti Jums trumpą įvadinę konsultaciją telefonu su gydymo rekomendacijomis',
-}) %>
-
-<%- include(_system.componentsPath(page.inputPath, 'call_to_action.ejs')) %>
-
-<%- include(_system.componentsPath(page.inputPath, 'forms/main_form_vilnius.ejs'), {
-    description: 'Į Jūsų užklausą sureaguos tinkamiausias „IndiMed“ draugijos kineziterapeutas, kuris telefonu suteiks trumpą konsultaciją ir gydymo rekomendacijas. Jei reikės, paskirs vizitą ir suteiks gydymo paslaugas Vilniuje.',
-    image: 'https://kizim-lt.b-cdn.net/indimed.lt/z4MtP2NdsS7expDuncUGURjP7rdtNZvHSm4BUEbY.webp',
 }) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'detail_links.ejs')) %>

@@ -28,20 +28,7 @@ meta_title: 'Skauda nugarą? | Konsultavimas ir gydymas Jūsų mieste'
     ],
 }) %>
 
-<%- include(_system.componentsPath(page.inputPath, 'about.ejs'), {
-    title: 'Kas yra „IndiMed“?',
-    description: 'Lietuvos nugaros gydymo specialistai, susibūrę į draugiją bei pasirengę suteikti Jums profesionalias gydymo rekomendacijas ir paslaugas Jūsų mieste',
-}) %>
-
-<%- include(_system.componentsPath(page.inputPath, 'benefit_icons.ejs')) %>
-
-<%- include(_system.componentsPath(page.inputPath, 'members.ejs'), {
-    title: 'Aktyviausi draugijos nugaros specialistai',
-    description: 'Labiausiai pacientų rekomenduojami „IndiMed“ draugijos nugaros gydymo specialistai yra pasiruošę suteikti Jums trumpą įvadinę konsultaciją telefonu su gydymo rekomendacijomis',
-}) %>
-
 <%- include(_system.componentsPath(page.inputPath, 'call_to_action.ejs')) %>
-
 
 <%- include(_system.componentsPath(page.inputPath, 'main_form.ejs'), {
     description: 'Į Jūsų užklausą sureaguos tinkamiausias „IndiMed“ draugijos nugaros gydymo specialistas, kuris telefonu suteiks trumpą konsultaciją ir gydymo rekomendacijas. Jei reikės, paskirs vizitą ir suteiks gydymo paslaugas Jūsų mieste.',
@@ -65,6 +52,18 @@ meta_title: 'Skauda nugarą? | Konsultavimas ir gydymas Jūsų mieste'
         }
         */
     ],
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'about.ejs'), {
+    title: 'Kas yra „IndiMed“?',
+    description: 'Lietuvos nugaros gydymo specialistai, susibūrę į draugiją bei pasirengę suteikti Jums profesionalias gydymo rekomendacijas ir paslaugas Jūsų mieste',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'benefit_icons.ejs')) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'members.ejs'), {
+    title: 'Aktyviausi draugijos nugaros specialistai',
+    description: 'Labiausiai pacientų rekomenduojami „IndiMed“ draugijos nugaros gydymo specialistai yra pasiruošę suteikti Jums trumpą įvadinę konsultaciją telefonu su gydymo rekomendacijomis',
 }) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'detail_links.ejs')) %>

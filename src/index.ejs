@@ -7,14 +7,6 @@ meta_title: 'Reabilitacijos ir sveikatingumo specialistai'
     title: 'Reabilitacijos ir <span class="text-green-600">sveikatingumo</span> specialistai',
 }) %>
 
-<%- include(_system.componentsPath(page.inputPath, 'about.ejs'), {
-    title: 'Kas yra „IndiMed“?',
-}) %>
-
-<%- include(_system.componentsPath(page.inputPath, 'benefit_icons.ejs')) %>
-
-<%- include(_system.componentsPath(page.inputPath, 'members.ejs')) %>
-
 <%- include(_system.componentsPath(page.inputPath, 'call_to_action.ejs')) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'main_form.ejs'), {
@@ -39,6 +31,14 @@ meta_title: 'Reabilitacijos ir sveikatingumo specialistai'
         */
     ],
 }) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'about.ejs'), {
+    title: 'Kas yra „IndiMed“?',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'benefit_icons.ejs')) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'members.ejs')) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'detail_links.ejs')) %>
 

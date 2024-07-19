@@ -9,18 +9,6 @@ meta_title: 'Kineziterapeutai į namus Jūsų mieste'
     description: 'Aprašykite užklausoje Jūsų patirtą traumą, ligą ar sutrikimą. Į užklausą sureaguos Jūsų atveju tinkamiausias kineziterapeutas, kuris telefonu suteiks trumpą konsultaciją ir gydymo rekomendacijas. Jei reikės, atvyks Jūsų namų adresu ir suteiks gydymo paslaugas Jūsų mieste.',
 }) %>
 
-<%- include(_system.componentsPath(page.inputPath, 'about.ejs'), {
-    title: 'Kas yra „IndiMed“?',
-    description: 'Lietuvos kineziterapeutai, susibūrę į draugiją bei pasirengę suteikti Jums profesionalias gydymo rekomendacijas ir paslaugas Jūsų mieste',
-}) %>
-
-<%- include(_system.componentsPath(page.inputPath, 'benefit_icons.ejs')) %>
-
-<%- include(_system.componentsPath(page.inputPath, 'members.ejs'), {
-    title: 'Aktyviausi draugijos kineziterapeutai',
-    description: 'Labiausiai pacientų rekomenduojami „IndiMed“ draugijos kineziterapeutai yra pasiruošę suteikti Jums trumpą įvadinę konsultaciją telefonu su gydymo rekomendacijomis',
-}) %>
-
 <%- include(_system.componentsPath(page.inputPath, 'call_to_action.ejs')) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'main_form.ejs'), {
@@ -45,6 +33,18 @@ meta_title: 'Kineziterapeutai į namus Jūsų mieste'
         }
         */
     ],
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'about.ejs'), {
+    title: 'Kas yra „IndiMed“?',
+    description: 'Lietuvos kineziterapeutai, susibūrę į draugiją bei pasirengę suteikti Jums profesionalias gydymo rekomendacijas ir paslaugas Jūsų mieste',
+}) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'benefit_icons.ejs')) %>
+
+<%- include(_system.componentsPath(page.inputPath, 'members.ejs'), {
+    title: 'Aktyviausi draugijos kineziterapeutai',
+    description: 'Labiausiai pacientų rekomenduojami „IndiMed“ draugijos kineziterapeutai yra pasiruošę suteikti Jums trumpą įvadinę konsultaciją telefonu su gydymo rekomendacijomis',
 }) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'detail_links.ejs')) %>

@@ -1,53 +1,46 @@
 ---
 layout: layout.ejs
-meta_title: 'Geras kineziterapeutas Jūsų mieste'
+meta_title: 'Gydomasis masažas Klaipėdoje'
 ---
 
 <%- include(_system.componentsPath(page.inputPath, 'hero.ejs'), {
-    pre_title: 'KINEZITERAPEUTŲ DRAUGIJA 🇱🇹',
-    title: 'Reikalingas geras kineziterapeutas<br><span class="text-green-600">Jūsų mieste?</span>',
-    description: 'Aprašykite užklausoje Jūsų patirtą traumą, ligą ar sutrikimą. Į užklausą sureaguos Jūsų atveju tinkamiausias kineziterapeutas, kuris telefonu suteiks trumpą konsultaciją ir gydymo rekomendacijas. Jei reikės, paskirs Jums vizitą ir suteiks gydymo paslaugas Jūsų mieste.',
+    pre_title: 'GYDOMOJO MASAŽO SPECIALISTAI 🇱🇹',
+    title: 'Gydomasis masažas<br><span class="text-green-600">Klaipėdoje</span>',
+    description: 'Aprašykite užklausoje savo gydomojo masažo poreikius ir priežastis. Į užklausą sureaguos Jūsų atveju tinkamiausias masažuotojas, kuris telefonu suteiks trumpą konsultaciją ir rekomendacijas. Jei reikės, paskirs Jums vizitą ir suteiks masažo paslaugas Klaipėdoje.',
+    slides: [
+        'https://kizim-lt.b-cdn.net/indimed.lt/masazas-1.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/masazas-2.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/masazas-3.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/masazas-4.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/masazas-5.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/masazas-6.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/masazas-7.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/masazas-8.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/masazas-9.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/masazas-10.webp',
+        'https://kizim-lt.b-cdn.net/indimed.lt/masazas-11.webp',
+    ],
 }) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'call_to_action.ejs'), {
-    title: 'Test',
-    description: 'Test',
+    description: 'Į užklausą sureaguos tinkamiausias gydomojo masažo specialistas Klaipėdoje',
 }) %>
 
-<%- include(_system.componentsPath(page.inputPath, 'main_form.ejs'), {
-    description: 'Į Jūsų užklausą sureaguos tinkamiausias „IndiMed“ draugijos kineziterapeutas, kuris telefonu suteiks trumpą konsultaciją ir gydymo rekomendacijas. Jei reikės, paskirs vizitą ir suteiks gydymo paslaugas Jūsų mieste.',
-    image: 'https://kizim-lt.b-cdn.net/indimed.lt/z4MtP2NdsS7expDuncUGURjP7rdtNZvHSm4BUEbY.webp',
-    fields: [
-        _formFields.patientAge,
-        _formFields.description,
-        _formFields.city,
-        _formFields.canArrive,
-        _formFields.preferedLocation, // <-- Conditional field
-        _formFields.name,
-        _formFields.email,
-        _formFields.phone,
-        /*
-        {
-            type: 'hidden',
-            data: {
-                name: _formFields.canArrive.data.name,
-                value: _const.canArriveNo,
-            },
-        }
-        */
-    ],
+<%- include(_system.componentsPath(page.inputPath, 'forms/main_form_klaipeda.ejs'), {
+    description: 'Į Jūsų užklausą sureaguos tinkamiausias „IndiMed“ draugijos gydomojo masažo specialistas, kuris telefonu suteiks trumpą konsultaciją ir rekomendacijas. Jei reikės, paskirs vizitą ir suteiks masažo paslaugas Klaipėdoje.',
+    image: 'https://kizim-lt.b-cdn.net/indimed.lt/masazas-5.webp',
 }) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'about.ejs'), {
     title: 'Kas yra „IndiMed“?',
-    description: 'Lietuvos kineziterapeutai, susibūrę į draugiją bei pasirengę suteikti Jums profesionalias gydymo rekomendacijas ir paslaugas Jūsų mieste',
+    description: 'Įvairių sričių Lietuvos sveikatingumo specialistai, susibūrę į draugiją bei pasirengę suteikti Jums profesionalias gydymo rekomendacijas ir paslaugas Jūsų mieste',
 }) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'benefit_icons.ejs')) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'members.ejs'), {
-    title: 'Aktyviausi draugijos kineziterapeutai',
-    description: 'Labiausiai pacientų rekomenduojami „IndiMed“ draugijos kineziterapeutai yra pasiruošę suteikti Jums trumpą įvadinę konsultaciją telefonu su gydymo rekomendacijomis',
+    title: 'Aktyviausi draugijos specialistai',
+    description: 'Labiausiai pacientų rekomenduojami „IndiMed“ draugijos specialistai yra pasiruošę suteikti Jums trumpą įvadinę konsultaciją telefonu su rekomendacijomis',
 }) %>
 
 <%- include(_system.componentsPath(page.inputPath, 'detail_links.ejs')) %>

@@ -1,4 +1,11 @@
 <%
+
+    let cta_description = 'Į užklausą sureaguos tinkamiausias Jūsų atveju specialistas'
+
+    if (typeof description !== 'undefined') {
+        cta_description = description;
+    }
+
     let steps = [
         {
             title: 'Jūs paliekate savo užklausą mūsų „IndiMed” specialistų draugijai',
@@ -24,7 +31,7 @@
             <%- include('./single/h3.ejs', {text: 'Laukiame jūsų užklausos 🤙'}) %>
             <%- include('./single/h2.ejs', {text: 'Išbandykite be įsipareigojimo'}) %>
             <div class="text-white lg:text-lg max-w-2xl m-auto mb-8">
-                Į užklausą sureaguos tinkamiausias Jūsų atveju specialistas
+                <%- cta_description %>
             </div>
         </div>
 
